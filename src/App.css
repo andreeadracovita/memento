@@ -1,42 +1,187 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --accent-color: #FBF303; /* yellow: #FBF303, spring teal: #0EA7A5 */
+  --light-grey: #C2C2C2;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Fonts */
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.open-sans-light {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
-.card {
-  padding: 2em;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
-.read-the-docs {
-  color: #888;
+.logo-title {
+  font-size: 1.5rem;
+}
+
+/* General */
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.pill-button {
+  border-radius: 500px;
+}
+
+.anchor-parent {
+  position: relative;
+}
+
+.subsection-header {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.relative-title {
+  position: relative;
+  top: -5px;
+}
+
+.timeline {
+  border-left: 1px solid black;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  margin-left: -5px;
+}
+
+/* Colors */
+.black-bg-color {
+  background-color: #000209;
+}
+
+.yellow-bg-color {
+  background-color: var(--accent-color);
+}
+
+.light-grey-bg-color {
+  background-color: #EFF3F4;
+}
+
+.dark-grey-bg-color {
+  background-color: #DADEDF;
+}
+
+.text-yellow {
+  color: var(--accent-color);
+}
+
+/* Section: Navbar */
+#navbar {
+  background-color: black;
+  color: white;
+}
+
+#navbar a {
+  color: white !important;
+}
+
+#navbar a:hover {
+  color: var(--light-grey);
+}
+
+/* Section: Ribbon */
+#skills-ribbon {
+  background-color: #000209;
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+  width: 100%;
+}
+
+/* Section: About */
+#yellow-circle-about {
+  background-color: var(--accent-color);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  z-index: 0;
+}
+
+/* Section: Experience */
+#exp-first {
+  position: absolute;
+  left: -29px;
+}
+
+#exp-second {
+  position: absolute;
+  left: -29px;
+}
+
+/* Section: Projects */
+.yellow-tag-accent {
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: -35%;
+  z-index: 0;
+}
+
+.link-icon {
+  top: 10px;
+  right: 10px;
+  color: white;
+}
+
+.grey-card {
+  border: 1px solid #000209;
+  background-color: #EFF3F4;
+  box-shadow: -10px -10px #DADEDF;
+}
+
+/* Section: Education */
+#edu-first {
+  position: absolute;
+  left: -29px;
+}
+
+#edu-second {
+  position: absolute;
+  left: -29px;
 }
