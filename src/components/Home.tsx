@@ -15,6 +15,9 @@ export default function Home() {
 					<Link to="/complexity" className="nav-link">Complexity</Link>
 				</li>
 				<li>
+					<Link to="/algorithms" className="nav-link">Algorithms</Link>
+				</li>
+				<li>
 					<Link to="/jslibrary" className="nav-link">JS Library</Link>
 				</li>
 				<li>
