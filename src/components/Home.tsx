@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 
-import Card from "./Card";
-
 export default function Home() {
 	
 	return (
