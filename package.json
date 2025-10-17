@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "homepage": "https://andreeadracovita.github.io/memento",
   "dependencies": {
     "bootstrap": "^5.3.8",
     "react": "^19.1.1",
