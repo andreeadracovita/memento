@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { pagesMap } from "../constants";
 
 export default function Navbar() {
-
-	console.log(Array.from(pagesMap.entries()));
 	return (
 		<header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between my-3">
 			<div className="col-md-3 mb-2 mb-md-0">
@@ -18,7 +16,7 @@ export default function Navbar() {
 			{
 				Array.from(pagesMap.entries()).map((entry: any, index: number) => 
 					<li key={index}>
-						<Link to={entry[1]} className="nav-link px-2 text-uppercase">{entry[0]}</Link>
+						<Link to={entry[1].link} className="nav-link px-2 text-uppercase">{entry[0]}</Link>
 					</li>
 				)
 			}

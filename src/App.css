@@ -47,7 +47,11 @@ pre {
 /* General */
 p {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 .z-1 {
@@ -174,6 +178,15 @@ p {
   margin-bottom: 1rem;
 }
 
+.card-section {
+  font-size: 1rem;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+}
+
 #toc {
   list-style-type: none;
 }
@@ -230,4 +243,8 @@ p {
 .title-anchor {
   text-decoration: none;
   color: inherit;
+}
+
+.clickable {
+  cursor: pointer;
 }
