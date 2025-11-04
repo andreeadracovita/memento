@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { pagesMap } from "../constants";
+import { pagesMap } from "constants";
 
 export default function Navbar() {
 	return (

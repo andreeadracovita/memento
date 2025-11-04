@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import CardHeader from "../CardHeader";
+import CardHeader from "components/CardHeader";
 
 export default function Array() {
 	const [toggle, setToggle] = useState(false);

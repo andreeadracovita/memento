@@ -26,6 +26,10 @@
   font-variation-settings: "wdth" 100;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -179,7 +183,7 @@ a {
 }
 
 .card-section {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-family: "Archivo Black", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -247,4 +251,9 @@ a {
 
 .clickable {
   cursor: pointer;
+}
+
+.graphics {
+  width: 400px;
+  max-width: 100%;
 }

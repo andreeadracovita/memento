@@ -35,6 +35,17 @@ export default function PerformanceChart() {
 					<div className="d-flex justify-content-center">
 						<img src="time-chart.svg" />
 					</div>
+					<div>
+						<ul>
+							<li>O(1) - constant</li>
+							<li>O(N) - liniar</li>
+							<li>O(log N) - logarithmic</li>
+							<li>O(N log N) - linearithmic/loglinear</li>
+							<li>O(N<sup>2</sup>) - quadratic</li>
+							<li>O(2<sup>N</sup>) - exponential</li>
+							<li>O(N!) - factorial</li>
+						</ul>
+					</div>
 				</>
 			}
 		</div>

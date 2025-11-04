@@ -7,11 +7,9 @@ import Space from "./complexity/Space";
 import Time from "./complexity/Time";
 
 export default function Complexity() {
-	
 	return (
 		<>
 			<h1 className="archivo-black-regular text-uppercase">Complexity</h1>
-
 			<BigO />
 			<PerformanceChart />
 			<Time />
@@ -20,7 +18,8 @@ export default function Complexity() {
 			<DataStructures />
 			<Sorting />
 
-			<a href="https://www.bigocheatsheet.com/" target="_blank">Reference</a>
+			<p><strong>Reference</strong></p>
+			<a href="https://www.bigocheatsheet.com/" target="_blank">https://www.bigocheatsheet.com/</a>
 		</>
 	);
 }

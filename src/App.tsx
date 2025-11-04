@@ -5,6 +5,7 @@ import Algorithms from "./components/Algorithms";
 import Complexity from "./components/Complexity";
 import Concepts from "./components/Concepts";
 import DataStructures from "./components/DataStructures";
+import Java from "./components/Java";
 import JSLibrary from "./components/JSLibrary";
 import Home from "./components/Home";
 import HttpResponses from "./components/HttpResponses";
@@ -14,7 +15,7 @@ import React from "./components/React";
 function App() {
 
   return (
-    <div className="container px-5">
+    <div className="container px-5 mb-5">
       <Navbar />
       <Routes>
         <Route path="/memento/" element={<Home />} />
@@ -24,6 +25,7 @@ function App() {
         <Route path="/memento/algorithms" element={<Algorithms />} />
 
         <Route path="/memento/js-library" element={<JSLibrary />} />
+        <Route path="/memento/java" element={<Java />} />
         <Route path="/memento/react" element={<React />} />
         <Route path="/memento/http-responses" element={<HttpResponses />} />
       </Routes>

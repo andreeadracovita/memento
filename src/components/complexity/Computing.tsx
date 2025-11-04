@@ -46,7 +46,7 @@ for (int b : arrB) {
 					<p className="mt-3"><strong>Recursive Runtimes</strong></p>
 					<pre>{recursive}</pre>
 					<br />
-					<img src="graphics/recursivity.png" style={{"width": "400px"}} />
+					<img src="graphics/recursivity.png" className="graphics" />
 					<br />
 					<pre>Number of calls = 2<sup>0</sup> + 2<sup>1</sup> + 2<sup>2</sup> + 2<sup>3</sup> + ... + 2<sup>N-1</sup> = 2<sup>N</sup> - 1</pre>
 					<p><strong>Pattern</strong>: O(branches<sup>depth</sup>)</p>

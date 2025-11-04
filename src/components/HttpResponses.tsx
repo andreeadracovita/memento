@@ -1,17 +1,14 @@
 export default function HttpResponses() {
-
 	const httpRegular = `(100 – 199) Informational responses
 (200 – 299) Successful responses
 (300 – 399) Redirection messages
 (400 – 499) Client error responses
 (500 – 599) Server error responses`;
-
 	const httpFunny = `(100 - 199) Hold on
 (200 - 299) Here you go
 (300 - 399) Go away
 (400 - 499) You fucked up
 (500 - 599) I fucked up`;
-
 	const mostFrequent = `200 OK
 301 Moved Permanently
 302 Found

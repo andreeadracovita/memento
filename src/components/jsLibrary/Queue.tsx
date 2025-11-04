@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import CardHeader from "../CardHeader";
+import CardHeader from "components/CardHeader";
 
 export default function Queue() {
 	const [toggle, setToggle] = useState(false);
 
 	return (
-		<div className="grey-card">
+		<div id="queue" className="grey-card">
 			<CardHeader
 				title={"Queue"}
 				toggle={toggle}
