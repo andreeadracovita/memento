@@ -8,7 +8,7 @@ export default function DateTime() {
 let now = new Date()             // The current time as a Date object.
 
 // If you pass one numeric argument, the Date() constructor interprets that argument as the number of milliseconds since the 1970 epoch:
-let epoch = new Date(0);  // Midnight, January 1st, 1970, GMT
+let epoch = new Date(0);         // Midnight, January 1st, 1970, GMT
 
 // Midnight in England, January 1, 2100
 let century = new Date(Date.UTC(2100, 0, 1));
@@ -57,20 +57,20 @@ d.toISOString()         // => "2020-01-02T01:10:30.000Z"`;
 			{
 				toggle &&
 				<>
-					<pre>{code}</pre>
-					<p>Note that when invoked with multiple numbers, the <pre>Date()</pre> constructor interprets them using whatever time zone the local computer is set to. If you want to specify a date and time in UTC (Universal Coordinated Time, aka GMT), then you can use the <pre>Date.UTC()</pre>.</p>
+					<div className="code"><pre>{code}</pre></div>
+					<p>Note that when invoked with multiple numbers, the <strong>Date()</strong> constructor interprets them using whatever time zone the local computer is set to. If you want to specify a date and time in UTC (Universal Coordinated Time, aka GMT), then you can use the <strong>Date.UTC()</strong>.</p>
 					<p>JavaScript represents dates internally as integers that specify the number of milliseconds since (or before) midnight on January 1, 1970, UTC time.</p>
 					<p>These millisecond values are sometimes called timestamps, and it is sometimes useful to work with them directly rather than with Date objects. The static Date.now() method returns the current time as a timestamp and is helpful when you want to measure how long your code takes to run:</p>
-					<pre>{runtime}</pre>
+					<div className="code"><pre>{runtime}</pre></div>
 					<p className="card-section">Date Arithmetic</p>
 					<ul>
 						<li>Date objects can be compared with JavaScript’s standard &lt;, &lt;=, &gt;, and &gt;= comparison operators.</li>
 						<li>Can subtract one Date object from another to determine the number of milliseconds between the two dates.</li>
 						<li>Date setting methods work <strong>correctly even when they overflow</strong>. When we add three months to the current month, we can end up with a value greater than 11 (which represents December). The setMonth() handles this by incrementing the year as needed. Similarly, when we set the day of the month to a value larger than the number of days in the month, the month gets incremented appropriately.</li>
 					</ul>
-					<pre>{arithmetic}</pre>
+					<div className="code"><pre>{arithmetic}</pre></div>
 					<p className="card-section">Formatting and Parsing Date String</p>
-					<pre>{formatting}</pre>
+					<div className="code"><pre>{formatting}</pre></div>
 				</>
 			}
 		</div>

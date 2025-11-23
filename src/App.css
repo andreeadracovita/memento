@@ -1,5 +1,6 @@
 :root {
   --accent-color: #FBF303; /* yellow: #FBF303, spring teal: #0EA7A5 */
+  --code-background: #e1e1e1; /*#FFFDBD;*/
   --light-grey: #C2C2C2;
 }
 
@@ -44,6 +45,12 @@ pre {
   display: inline;
 }
 
+.code {
+  padding: 0.5rem;
+  background-color: var(--code-background);
+  border-radius: 3px;
+}
+
 .logo-title {
   font-size: 1.5rem;
 }
@@ -61,43 +68,6 @@ a {
 .z-1 {
   position: relative;
   z-index: 1;
-}
-
-.pill-button {
-  border-radius: 500px;
-}
-
-.anchor-parent {
-  position: relative;
-}
-
-.subsection-header {
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  writing-mode: vertical-lr;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.relative-title {
-  position: relative;
-  top: -5px;
-}
-
-.timeline {
-  border-left: 1px solid black;
-}
-
-.timeline-dot {
-  width: 20px;
-  height: 20px;
-  background-color: black;
-  border-radius: 50%;
-  margin-left: -5px;
 }
 
 /* Colors */
@@ -127,51 +97,26 @@ a {
   color: white;
 }
 
-/* Section: Ribbon */
-#skills-ribbon {
-  background-color: #000209;
-  padding-top: 1em !important;
-  padding-bottom: 1em !important;
-  width: 100%;
-}
-
-/* Section: About */
-#yellow-circle-about {
-  background-color: var(--accent-color);
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  position: absolute;
-  top: -60px;
-  left: -60px;
-  z-index: 0;
-}
-
-/* Section: Projects */
-.yellow-tag-accent {
-  background-color: var(--accent-color);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: -35%;
-  z-index: 0;
-}
-
-.link-icon {
-  top: 10px;
-  right: 10px;
-  color: white;
-}
-
+/* Card components */
 .grey-card {
   border: 1px solid #000209;
   background-color: #EFF3F4;
   box-shadow: -10px -10px #DADEDF;
-  padding: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   color: black;
+}
+
+.card-header {
+  background-color: #EFF3F4;
+  padding-top: 1rem;
+  /*padding-bottom: 1rem;*/
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 
 .card-title {
@@ -191,10 +136,7 @@ a {
   margin-top: 0.5rem;
 }
 
-#toc {
-  list-style-type: none;
-}
-
+/* Complexity colors */
 .gray {
   border: 1px solid #adadad;
   color: black;
@@ -231,12 +173,20 @@ a {
   background-color: #ff8989;
 }
 
-.nav-link {
+/*.nav-link {
   color: white !important;
 }
 
 .nav-link:hover {
   text-decoration: underline;
+}*/
+
+.nav-link-override {
+  color: white;
+}
+
+.nav-link-override:hover {
+  color: var(--light-grey);
 }
 
 .suprascript {

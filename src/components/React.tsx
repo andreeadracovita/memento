@@ -22,8 +22,9 @@ export default function React() {
 			<h1 className="archivo-black-regular">React</h1>
 
 			<div className="grey-card">
+				<p>A library for JS.</p>
 				<p className="card-title">Advantages</p>
-				<p>fast, scalable, flexible, powerful, modular programming style and has a robust developer community that’s rapidly growing</p>
+				<p>Fast, scalable, flexible, powerful, modular programming style and has a robust developer community that’s rapidly growing.</p>
 
 				<p className="card-section">React Virtual DOM</p>
 				<p>When new elements are added to the UI, a virtual DOM, which is represented as a tree is created. Each element is a node on this tree. If the state of any of these elements changes, a new virtual DOM tree is created. This tree is then compared or “diffed” with the previous virtual DOM tree.</p>
@@ -77,14 +78,16 @@ export default function React() {
 				<pre>{useMemoCode}</pre>
 			</div>
 
-			<p><strong>Reference</strong></p>
-			<a href="https://react.dev/reference/react" target="_blank">https://react.dev/reference/react</a>
-			<a href="https://payalpaul2436.medium.com/10-main-core-concept-you-need-to-know-about-react-303e986e1763" target="_blank">10 Main Core Concept You Need to Know About React</a>
-
 			<div className="grey-card">
 				<p className="card-title">Testing</p>
 				<p>The most common approach uses Jest as the test runner and assertion library, combined with React Testing Library for rendering components and querying the DOM in a user-like manner.</p>
 			</div>
+
+			<p><strong>Reference</strong></p>
+			<ul>
+				<li><a href="https://react.dev/reference/react" target="_blank">https://react.dev/reference/react</a></li>
+				<li><a href="https://payalpaul2436.medium.com/10-main-core-concept-you-need-to-know-about-react-303e986e1763" target="_blank">10 Main Core Concept You Need to Know About React</a></li>
+			</ul>
 		</>
 	);
 }

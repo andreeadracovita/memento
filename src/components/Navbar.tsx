@@ -16,7 +16,7 @@ export default function Navbar() {
 			{
 				Array.from(pagesMap.entries()).map((entry: any, index: number) => 
 					<li key={index}>
-						<Link to={entry[1].link} className="nav-link px-2 text-uppercase">{entry[0]}</Link>
+						<Link to={entry[1].link} className="nav-link px-2 text-uppercase nav-link-override">{entry[0]}</Link>
 					</li>
 				)
 			}
