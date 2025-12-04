@@ -38,14 +38,62 @@ let quote = /"([^"]*)"/g;
 
 let quote = /"(?<quotedText>[^"]*)"/g;
 'He said "stop"'.replace(quote, '«$<quotedText>»')  // => 'He said «stop»'`;
-	const matchCode = `"7 plus 8 equals 15".match(/\d+/g)  // => ["7", "8", "15"]`;
-	const matchAllCode = ``;
-	const splitCode = ``;
+	const matchCode = `"7 plus 8 equals 15".match(/\d+/g)  // => ["7", "8", "15"]
+
+// A very simple URL parsing RegExp
+let url = /(\\w+):\\/\\/([\\w.]+)\\/(\\S*)/;
+let text = "Visit my blog at http://www.example.com/~david";
+let match = text.match(url);
+let fullurl, protocol, host, path;
+if (match !== null) {
+    fullurl = match[0];   // fullurl == "http://www.example.com/~david"
+    protocol = match[1];  // protocol == "http"
+    host = match[2];      // host == "www.example.com"
+    path = match[3];      // path == "~david"
+}
+
+// OR rewritten as
+let url = /(?<protocol>\\w+):\\/\\/(?<host>[\\w.]+)\\/(?<path>\\S*)/;
+let text = "Visit my blog at http://www.example.com/~david";
+let match = text.match(url);
+match[0]               // => "http://www.example.com/~david"
+match.input            // => text
+match.index            // => 17
+match.groups.protocol  // => "http"
+match.groups.host      // => "www.example.com"
+match.groups.path      // => "~david"`;
+	const matchAllCode = `// One or more Unicode alphabetic characters between word boundaries
+const words = /\\b\\p{Alphabetic}+\\b/gu; // \\p is not supported in Firefox yet
+const text = "This is a naïve test of the matchAll() method.";
+for(let word of text.matchAll(words)) {
+    console.log(\`Found '\${word[0]}' at index \${word.index}.\`);
+}`;
+	const splitCode = `"123,456,789".split(",")           // => ["123", "456", "789"]
+
+"1, 2, 3,\\n4, 5".split(/\\s*,\\s*/)  // => ["1", "2", "3", "4", "5"]`;
+	const testCode = `let dictionary = [ "apple", "book", "coffee" ];
+let doubleLetterWords = [];
+let doubleLetter = /(\\w)\\1/g;
+
+for(let word of dictionary) {
+    if (doubleLetter.test(word)) {
+        doubleLetterWords.push(word);
+    }
+}
+doubleLetterWords  // => ["apple", "coffee"]: "book" is missing!
+`;
+	const execCode = `let pattern = /Java/g;
+let text = "JavaScript > Java";
+let match;
+while((match = pattern.exec(text)) !== null) {
+    console.log(\`Matched \${match[0]} at \${match.index}\`);
+    console.log(\`Next search begins at \${pattern.lastIndex}\`);
+}`;
 
 	return (
 		<div className="grey-card">
 			<CardHeader
-				title={"Regular Expression"}
+				title={"Regular Expression ★"}
 				link={"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"}
 				toggle={toggle}
 				handleToggle={() => setToggle(!toggle)}
@@ -165,18 +213,35 @@ let quote = /"(?<quotedText>[^"]*)"/g;
 						<li>
 							<strong>match()</strong> - takes a regular expression as its only argument and returns an array that contains the results of the match, or null if no match is found. If the regular expression has the g flag set, the method returns an array of all matches that appear in the string. If it does not have g flag, it returns the first match.
 							<div className="code"><pre>{matchCode}</pre></div>
+							The <strong>input</strong> property refers to the string on which match() was called. The <strong>index</strong> property is the position within that string at which the match starts. And if the regular expression contains named capture <strong>groups</strong>, then the returned array also has a groups property whose value is an object. The properties of this object match the names of the named groups, and the values are the matching text.
 						</li>
 						<li>
-							<strong>matchAll()</strong>
+							<strong>matchAll()</strong> - expects a RegExp with the g flag set. Instead of returning an array of matching substrings like match() does, however, it returns an iterator that yields the kind of match objects that match() returns when used with a non-global RegExp.
 							<div className="code"><pre>{matchAllCode}</pre></div>
 						</li>
 						<li>
-							<strong>split()</strong>
+							<strong>split()</strong> - breaks the string on which it is called into an array of substrings, using the argument as a separator. Can also take a regular expression as its argument, and this allows you to specify more general separators.
 							<div className="code"><pre>{splitCode}</pre></div>
 						</li>
 					</ul>
 
 					<p className="card-section">The RegExp class</p>
+					<ul>
+						<li>The constructor takes one or two string arguments and creates a new RegExp object. The first argument is a string that contains the body of the regular expression. The second argument is optional, if supplied, it indicates the flags: g, i, m, s, u, y.</li>
+						<li>
+							Methods
+							<ul>
+								<li>
+									<strong>test()</strong> - takes a string argument, returns true if the string matches the pattern.
+									<div className="code"><pre>{testCode}</pre></div>
+								</li>
+								<li>
+									<strong>exec()</strong> - most general and powerful way to use regular expressions. Takes a single string argument and looks for a match in that string. If no match found, returns null. If a match is found, returns an array just like the return for match() non-global. Even when the regular expression has global g flag, it returns the same array. Consults lastIndex to determine where to start looking for a match. If exec() fails to find a match, resets lastIndex to 0, allowing for repeated calls.
+									<div className="code"><pre>{execCode}</pre></div>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</>
 			}
 		</div>
