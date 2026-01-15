@@ -19,12 +19,37 @@ export default function JSLibrary() {
 			<String />
 			<Regex />
 			<Object />
-			<Map />
 			<Set />
+			<Map />
+
+			<div className="grey-card">
+				<ul>
+					<li>Destructuring</li>
+					<li>Operators Table</li>
+					<li>In/instanceof</li>
+					<li>Statements - for/of, for/in</li>
+					<li>Functions</li>
+					<li>Classes</li>
+					<li>Modules</li>
+					<li>Error classes</li>
+					<li>Internationalization API</li>
+					<li>Timers</li>
+					<li>Iterators and Generators</li>
+					<li>Asynchronous JS</li>
+					<li>JS in Web Browsers</li>
+					<li>Server-Side JS with Node</li>
+				</ul>
+			</div>
+			
 			<List />
 			<Stack />
 			<Queue />
 			<HashTable />
+
+			<p><strong>Reference</strong></p>
+			<a href="https://learning.oreilly.com/library/view/javascript-the-definitive/9781491952016/" target="_blank">
+				JavaScript: The Definitive Guide, 7th Edition
+			</a>
 		</>
 	);
 }

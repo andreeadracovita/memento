@@ -17,7 +17,7 @@ export default function Set() {
 			{
 				toggle &&
 				<>
-					<p>The Set object lets you store unique values of any type, whether primitive values or object references.</p>
+					<p>Set = a collection of values, not ordered/indexed, does not allow duplicates</p>
 					<pre>{code}</pre>
 				</>
 			}

@@ -4,17 +4,6 @@ import CardHeader from "components/CardHeader";
 
 export default function Regex() {
 	const [toggle, setToggle] = useState(false);
-	const code = `/^HTML/;             // Match the letters H T M L at the start of a string
-/[1-9][0-9]*/;       // Match a nonzero digit, followed by any # of digits
-/\\bjavascript\\b/i;   // Match "javascript" as a word, case-insensitive
-
-let text = "testing: 1, 2, 3";   // Sample text
-let pattern = /\\d+/g;            // Matches all instances of one or more digits
-pattern.test(text)               // => true: a match exists
-text.search(pattern)             // => 9: position of first match
-text.match(pattern)              // => ["1", "2", "3"]: array of all matches
-text.replace(pattern, "#")       // => "testing: #, #, #"
-text.split(/\\D+/)                // => ["","1","2","3"]: split on nondigits`;
 	const defRegExp1Code = `let pattern = /s$/;   // any string that ends with letter s
 let pattern = new RegExp("s$");
 let pattern = /s$/i;  // any string that ends in letter s or S (case-insensitive)`;
@@ -93,7 +82,7 @@ while((match = pattern.exec(text)) !== null) {
 	return (
 		<div className="grey-card">
 			<CardHeader
-				title={"Regular Expression ★"}
+				title={"Regular Expression"}
 				link={"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"}
 				toggle={toggle}
 				handleToggle={() => setToggle(!toggle)}
@@ -102,7 +91,6 @@ while((match = pattern.exec(text)) !== null) {
 				toggle &&
 				<>
 					<p>A regular expression is an object that describes a textual pattern. The JavaScript RegExp class represents regular expressions, and both String and RegExp define methods that use regular expressions to perform powerful pattern-matching and search-and-replace functions on text.</p>
-					{/*<pre>{code}</pre>*/}
 
 					<p className="card-section">Defining regular expressions</p>
 					<div className="code"><pre>{defRegExp1Code}</pre></div>
