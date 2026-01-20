@@ -21,6 +21,15 @@ export default function JSLibrary() {
 			<Object />
 			<Set />
 			<Map />
+			
+			<List />
+			<Stack />
+			<Queue />
+			<HashTable />
+
+			<div className="grey-card">
+				
+			</div>
 
 			<div className="grey-card">
 				<ul>
@@ -40,11 +49,6 @@ export default function JSLibrary() {
 					<li>Server-Side JS with Node</li>
 				</ul>
 			</div>
-			
-			<List />
-			<Stack />
-			<Queue />
-			<HashTable />
 
 			<p><strong>Reference</strong></p>
 			<a href="https://learning.oreilly.com/library/view/javascript-the-definitive/9781491952016/" target="_blank">

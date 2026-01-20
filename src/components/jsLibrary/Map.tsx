@@ -4,12 +4,45 @@ import CardHeader from "components/CardHeader";
 
 export default function Map() {
 	const [toggle, setToggle] = useState(false);
-	const code = `const emptyMap = new Map()
-const map = new Map([
-    ['key', 'value']
-])
-TODO
-`;
+	const code = `let m = new Map();
+let n = new Map([
+	["one", 1],
+	["two", 2]
+]);
+
+let copy = new Map(n);
+let o = { x: 1, y: 2 };
+let p = new Map(Object.entries(o));
+
+let m = new Map();
+m.size
+m.set("one", 1);
+m.get("one");
+m.set("one", true);
+m.has("two");    // false
+m.delete("one"); // true
+m.delete("two"); // false
+m.clear();
+
+// Misc
+let m = new Map();
+m.set({}, 1); // map one empty object to 1
+m.set({}, 2); // map another empty object to 2
+m.get({});    // undefined, not a key
+m.set(m, undefined); // map itself to value undefined
+m.has(m);     // true
+m.get(m);     // undefined
+
+let m = new Map([["x", 1], ["y", 2]]);
+[...m]
+
+for(let [key, value] of m) { ... }
+
+[...m.keys()]
+[...m.values()]
+[...m.entries()]
+
+m.forEach((value, key) => { ... });`;
 
 	return (
 		<div className="grey-card">
@@ -22,13 +55,18 @@ TODO
 			{
 				toggle &&
 				<>
-					<p className="mb-2">The Map object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.</p>
-					<pre>{code}</pre>
-					<p className="card-section mt-3">Facts</p>
 					<ul>
-						<li>Map and Object both store key-value pairs, but Map offers significant advantages in specific scenarios. A <strong>Map can use any data type as a key</strong>, including objects, functions, and primitives, whereas an Object only accepts strings or symbols as keys, automatically converting other types to strings, which can lead to unintended collisions. This makes Map ideal for cases where keys need to be objects or other non-string types, such as associating metadata with DOM elements or other objects without modifying them directly.</li>
-						<li><strong>Performance-wise</strong>, Map is <strong>optimized for frequent additions and removals of key-value pairs</strong>, making it faster than Object in such scenarios due to how JavaScript engines optimize Map's internal structure. In contrast, Object performance can degrade with frequent delete operations due to its shape assumption by the JavaScript Virtual Machine. Map also <strong>provides a size property</strong> to directly retrieve the number of entries, while counting keys in an Object requires using Object.keys().length, which is less efficient.</li>
+						<li>Map = a set of values - <strong>keys</strong> - with <strong>values</strong> they are associated with.</li>
+						<li>Maps use arbitrary values as "indexes".</li>
+						<li>Looking up the value of a key will be fast no matter how large the map.</li>
+						<li>The optional argument to Map() constructor needs to be iterable, each element needs to be formatted as [key, value].</li>
+						<li>Map objects are iterable, each iterated value is a 2-element array: first is the key, second is the value. Iteration in insertion order.</li>
+						<li>WeakMap - variant of Map, does not prevent its key from being garbage collected. Does not allow primitive values as members. A regular map holds "strong" references to its key values. The WeakMap holds "weak" references so that they are not reachable through WeakMap, their presence in the map does not prevent their memory from being reclaimed. WeakMap is not iterable, does not define keys(), values() and forEach(). Intended use: allows association of values with objects without causing memory leaks. Used for implementing cache.</li>
+						<li></li>
+						<li></li>
+						<li></li>
 					</ul>
+					<pre>{code}</pre>
 				</>
 			}
 		</div>

@@ -55,6 +55,7 @@ primes.forEach(n => { product *= n; });
 						<li>Performs string equality check ===. mySet.add([1,2]); mySet.delete([1,2]) returns false.</li>
 						<li>The Set class is iterable, can use for/of loop to enumerate all the elements in a set. Can also convert them to arrays and argument list using ... spread operator.</li>
 						<li>A JS set remembers the order in which the elements were inserted in, uses this order when iterating.</li>
+						<li>WeakSet - a set of objects that does not prevent those objects from garbage collection. Does not allow primitive values as members. Only has add(), has(), delete(). Does not have size().</li>
 					</ul>
 					<pre>{code}</pre>
 				</>
