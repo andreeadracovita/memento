@@ -1,8 +1,16 @@
 import Array from "components/jsLibrary/Array";
+import AsynchronousJS from "components/jsLibrary/AsyncJS";
+import Classes from "components/jsLibrary/Classes";
 import DateTime from "components/jsLibrary/DateTime";
+import ErrorClasses from "components/jsLibrary/ErrorClasses";
+import Functions from "components/jsLibrary/Functions";
+import General from "components/jsLibrary/General";
 import HashTable from "components/jsLibrary/HashTable";
+import JSWebBrowsers from "components/jsLibrary/JSWebBrowsers";
 import List from "components/jsLibrary/List";
 import Map from "components/jsLibrary/Map";
+import Modules from "components/jsLibrary/Modules";
+import Node from "components/jsLibrary/Node";
 import Object from "components/jsLibrary/Object";
 import Queue from "components/jsLibrary/Queue";
 import Regex from "components/jsLibrary/Regex";
@@ -27,28 +35,17 @@ export default function JSLibrary() {
 			<Queue />
 			<HashTable />
 
-			<div className="grey-card">
-				
-			</div>
+			<Functions />
+			<Classes />
+			<Modules />
 
-			<div className="grey-card">
-				<ul>
-					<li>Destructuring</li>
-					<li>Operators Table</li>
-					<li>In/instanceof</li>
-					<li>Statements - for/of, for/in</li>
-					<li>Functions</li>
-					<li>Classes</li>
-					<li>Modules</li>
-					<li>Error classes</li>
-					<li>Internationalization API</li>
-					<li>Timers</li>
-					<li>Iterators and Generators</li>
-					<li>Asynchronous JS</li>
-					<li>JS in Web Browsers</li>
-					<li>Server-Side JS with Node</li>
-				</ul>
-			</div>
+			<ErrorClasses />
+
+			<AsynchronousJS />
+			<JSWebBrowsers />
+			<Node />
+
+			<General />
 
 			<p><strong>Reference</strong></p>
 			<a href="https://learning.oreilly.com/library/view/javascript-the-definitive/9781491952016/" target="_blank">
