@@ -1,6 +1,6 @@
 :root {
   --accent-color: #FBF303; /* yellow: #FBF303, spring teal: #0EA7A5 */
-  --code-background: #e1e1e1; /*#FFFDBD;*/
+  --code-background: rgb(230 229 224); /*#e1e1e1 #FFFDBD;*/
   --light-grey: #C2C2C2;
 }
 
@@ -43,6 +43,8 @@ pre {
   white-space: pre-wrap;
   color: black;
   display: inline;
+  background-color: var(--code-background) !important;
+  border-radius: 5px;
 }
 
 .code {
