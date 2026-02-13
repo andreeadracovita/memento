@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
@@ -62,7 +63,7 @@ s.concat("!")           // "Hello, world!": just use + operator instead
 			{
 				toggle &&
 				<>
-					<pre>{code}</pre>
+					<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
 				</>
 			}
 		</div>

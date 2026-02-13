@@ -1,5 +1,7 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function Regex() {
@@ -93,7 +95,7 @@ while((match = pattern.exec(text)) !== null) {
 					<p>A regular expression is an object that describes a textual pattern. The JavaScript RegExp class represents regular expressions, and both String and RegExp define methods that use regular expressions to perform powerful pattern-matching and search-and-replace functions on text.</p>
 
 					<p className="card-section">Defining regular expressions</p>
-					<div className="code"><pre>{defRegExp1Code}</pre></div>
+					<SyntaxHighlighter language="javascript">{defRegExp1Code}</SyntaxHighlighter>
 					<ul>
 						<li>Regular expression literals are specified as characters within a pair of slash (<code>/</code>) characters.</li>
 						<li>All alphabetic characters and digits match themselves literally.</li>
@@ -148,7 +150,7 @@ while((match = pattern.exec(text)) !== null) {
 							Non-greedy repetition - matches as few occurrences as necessary <code>/a+?/</code> matches only the first letter a in "aaa".
 						</li>
 					</ul>
-					<div className="code"><pre>{defRegExp2Code}</pre></div>
+					<SyntaxHighlighter language="javascript">{defRegExp2Code}</SyntaxHighlighter>
 					<ul>
 						<li>
 							Alternating, grouping and references
@@ -191,25 +193,25 @@ while((match = pattern.exec(text)) !== null) {
 					<p>Switching to cover the API for using RegExp objects.</p>
 					<ul>
 						<li>
-							<strong>search()</strong> - return the character position of the start of the first match or -1 if no match. Does not support global searches, it ignores the g flag.
-							<div className="code"><pre>{searchCode}</pre></div>
+							<Accent>search()</Accent> - return the character position of the start of the first match or -1 if no match. Does not support global searches, it ignores the g flag.
+							<SyntaxHighlighter language="javascript">{searchCode}</SyntaxHighlighter>
 						</li>
 						<li>
-							<strong>replace()</strong> - search-and-replace operation. Regular expression as first parameter and a replacement string as its second argument. If g flag is set, replaces all matches in the string, otherwise, it replaces only the first match.
-							<div className="code"><pre>{replaceCode}</pre></div>
+							<Accent>replace()</Accent> - search-and-replace operation. Regular expression as first parameter and a replacement string as its second argument. If g flag is set, replaces all matches in the string, otherwise, it replaces only the first match.
+							<SyntaxHighlighter language="javascript">{replaceCode}</SyntaxHighlighter>
 						</li>
 						<li>
-							<strong>match()</strong> - takes a regular expression as its only argument and returns an array that contains the results of the match, or null if no match is found. If the regular expression has the g flag set, the method returns an array of all matches that appear in the string. If it does not have g flag, it returns the first match.
-							<div className="code"><pre>{matchCode}</pre></div>
-							The <strong>input</strong> property refers to the string on which match() was called. The <strong>index</strong> property is the position within that string at which the match starts. And if the regular expression contains named capture <strong>groups</strong>, then the returned array also has a groups property whose value is an object. The properties of this object match the names of the named groups, and the values are the matching text.
+							<Accent>match()</Accent> - takes a regular expression as its only argument and returns an array that contains the results of the match, or null if no match is found. If the regular expression has the g flag set, the method returns an array of all matches that appear in the string. If it does not have g flag, it returns the first match.
+							<SyntaxHighlighter language="javascript">{matchCode}</SyntaxHighlighter>
+							The <Accent>input</Accent> property refers to the string on which match() was called. The <Accent>index</Accent> property is the position within that string at which the match starts. And if the regular expression contains named capture <Accent>groups</Accent>, then the returned array also has a groups property whose value is an object. The properties of this object match the names of the named groups, and the values are the matching text.
 						</li>
 						<li>
-							<strong>matchAll()</strong> - expects a RegExp with the g flag set. Instead of returning an array of matching substrings like match() does, however, it returns an iterator that yields the kind of match objects that match() returns when used with a non-global RegExp.
-							<div className="code"><pre>{matchAllCode}</pre></div>
+							<Accent>matchAll()</Accent> - expects a RegExp with the g flag set. Instead of returning an array of matching substrings like match() does, however, it returns an iterator that yields the kind of match objects that match() returns when used with a non-global RegExp.
+							<SyntaxHighlighter language="javascript">{matchAllCode}</SyntaxHighlighter>
 						</li>
 						<li>
-							<strong>split()</strong> - breaks the string on which it is called into an array of substrings, using the argument as a separator. Can also take a regular expression as its argument, and this allows you to specify more general separators.
-							<div className="code"><pre>{splitCode}</pre></div>
+							<Accent>split()</Accent> - breaks the string on which it is called into an array of substrings, using the argument as a separator. Can also take a regular expression as its argument, and this allows you to specify more general separators.
+							<SyntaxHighlighter language="javascript">{splitCode}</SyntaxHighlighter>
 						</li>
 					</ul>
 
@@ -220,12 +222,12 @@ while((match = pattern.exec(text)) !== null) {
 							Methods
 							<ul>
 								<li>
-									<strong>test()</strong> - takes a string argument, returns true if the string matches the pattern.
-									<div className="code"><pre>{testCode}</pre></div>
+									<Accent>test()</Accent> - takes a string argument, returns true if the string matches the pattern.
+									<SyntaxHighlighter language="javascript">{testCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<strong>exec()</strong> - most general and powerful way to use regular expressions. Takes a single string argument and looks for a match in that string. If no match found, returns null. If a match is found, returns an array just like the return for match() non-global. Even when the regular expression has global g flag, it returns the same array. Consults lastIndex to determine where to start looking for a match. If exec() fails to find a match, resets lastIndex to 0, allowing for repeated calls.
-									<div className="code"><pre>{execCode}</pre></div>
+									<Accent>exec()</Accent> - most general and powerful way to use regular expressions. Takes a single string argument and looks for a match in that string. If no match found, returns null. If a match is found, returns an array just like the return for match() non-global. Even when the regular expression has global g flag, it returns the same array. Consults lastIndex to determine where to start looking for a match. If exec() fails to find a match, resets lastIndex to 0, allowing for repeated calls.
+									<SyntaxHighlighter language="javascript">{execCode}</SyntaxHighlighter>
 								</li>
 							</ul>
 						</li>

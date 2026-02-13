@@ -3,19 +3,6 @@ import { Link } from "react-router-dom";
 import { pagesMap } from "constants";
 
 export default function Home() {
-
-	const computeInvestmentValue = (yearly, returnPercentage, years) => {
-		let value = 0;
-		for (let i = 0; i < years; i++) {
-			// value = value * (100 + returnPercentage) / 100 + yearly;
-			value = (value + yearly) * (100 + returnPercentage) / 100;
-			console.log("EOY", i + 1, value);
-		}
-		return new Intl.NumberFormat('en-US', {
-		  style: 'currency',
-		  currency: 'USD'
-		}).format(value);
-	}
 	
 	return (
 		<>

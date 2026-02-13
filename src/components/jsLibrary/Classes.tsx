@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function Classes() {
@@ -188,21 +189,21 @@ class Chihuahua extends AbstractDog {
 				toggle &&
 				<>
 					<ul>
-						<li><span class="bold">A class is a set of objects that inherit properties from the same prototype object.</span></li>
+						<li><Accent>A class is a set of objects that inherit properties from the same prototype object.</Accent></li>
 						<li>A class of objects can be defined to share properties.</li>
 						<li>Instances of the class have their own properties to hold or define their state, but they also have methods that define their behavior.</li>
-						<li>Classes use <span class="bold">prototype-based inheritance</span>: if two objects inherit properties from the same prototype, then we say that those objects are instances of the same class.</li>
+						<li>Classes use <Accent>prototype-based inheritance</Accent>: if two objects inherit properties from the same prototype, then we say that those objects are instances of the same class.</li>
 						<li>JavaScript’s classes and prototype-based inheritance mechanism are substantially different from the classes and class-based inheritance mechanism of Java/C++.</li>
 						<li>The prototype object is fundamental to the identity of a class: two objects are instances of the same class if and only if they inherit from the same prototype object.</li>
-						<li>If o inherits from an object that inherits from an object that inherits from <span class="bold">C.prototype</span>, the expression will still evaluate to true.</li>
+						<li>If o inherits from an object that inherits from an object that inherits from <Accent>C.prototype</Accent>, the expression will still evaluate to true.</li>
 						<li>Classes started having their own syntax starting with ES6.</li>
-						<li>The keyword <span class="bold">constructor</span> is used to define the constructor function for the class. The class declaration statement defines a new variable Range and assigns the value of this special constructor function to that variable. If no initialization is needed, constructor can be omitted and an empty constructor will be generated.</li>
-						<li>Define a <span class="bold">static</span> method within a class body by prefixing the method declaration with the <span class="bold">static</span> keyword. Static methods are defined as properties of the constructor function rather than properties of the prototype object. Class methods vs instance methods.</li>
-						<li><span class="bold">Private fields</span>: a class field whose name is prefixed with <span class="bold">#</span> will be invisible and inaccessible (and therefore immutable) to any code outside of the class body. Private fields must be declared using this new field syntax before they can be used (cannot be initialized in constructor).</li>
-						<li>When using <span class="bold">extends</span> to create a subclass, the constructor of the subclass must use <span class="bold">super()</span> to invoke the superclass constructor.</li>
+						<li>The keyword <Accent>constructor</Accent> is used to define the constructor function for the class. The class declaration statement defines a new variable Range and assigns the value of this special constructor function to that variable. If no initialization is needed, constructor can be omitted and an empty constructor will be generated.</li>
+						<li>Define a <Accent>static</Accent> method within a class body by prefixing the method declaration with the <Accent>static</Accent> keyword. Static methods are defined as properties of the constructor function rather than properties of the prototype object. Class methods vs instance methods.</li>
+						<li><Accent>Private fields</Accent>: a class field whose name is prefixed with <Accent>#</Accent> will be invisible and inaccessible (and therefore immutable) to any code outside of the class body. Private fields must be declared using this new field syntax before they can be used (cannot be initialized in constructor).</li>
+						<li>When using <Accent>extends</Accent> to create a subclass, the constructor of the subclass must use <Accent>super()</Accent> to invoke the superclass constructor.</li>
 						<li>Cannot use this in constructor until after invoking super().</li>
-						<li><span class="bold">Composing classes</span>: if we want a class that <span class="bold">inherts the behavior of multiple other classes</span>, it is easier and more flexible to create an instance for each of the other classes inside our desired class and <span class="bold">delegate</span>.</li>
-						<li><span class="bold">Abstract classes</span>: classes that do not include a complete implementation. The subclasses, then, only need to define their own unique behavior by implementing the abstract methods defined—but not implemented—by the superclass. JavaScript does not have any formal definition of abstract methods or abstract classes.</li>
+						<li><Accent>Composing classes</Accent>: if we want a class that <Accent>inherts the behavior of multiple other classes</Accent>, it is easier and more flexible to create an instance for each of the other classes inside our desired class and <Accent>delegate</Accent>.</li>
+						<li><Accent>Abstract classes</Accent>: classes that do not include a complete implementation. The subclasses, then, only need to define their own unique behavior by implementing the abstract methods defined—but not implemented—by the superclass. JavaScript does not have any formal definition of abstract methods or abstract classes.</li>
 					</ul>
 					<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
 				</>

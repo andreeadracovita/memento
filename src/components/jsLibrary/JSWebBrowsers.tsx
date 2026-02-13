@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
@@ -21,7 +22,7 @@ export default function JSWebBrowsers() {
 						<li></li>
 						<li></li>
 					</ul>
-					<pre>{code}</pre>
+					<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
 				</>
 			}
 		</div>

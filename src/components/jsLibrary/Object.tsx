@@ -1,5 +1,7 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function Object() {
@@ -147,7 +149,7 @@ p.x   // undefined, spread operator only spreads own properties, not inherited o
 						<li>Any value in JS that is not a string, number, Symbol, true, false, null or undefined is a object.</li>
 						<li>Objects are mutable and manipulated by reference rather than by value.</li>
 						<li>Most common actions: create, set, query, delete, test, enumerate their properties.</li>
-						<li>In addition to name and value, each property has <strong>three property attributes</strong>:
+						<li>In addition to name and value, each property has <Accent>three property attributes</Accent>:
 							<ul>
 								<li>writable (if property can be set)</li>
 								<li>enumerable (if property name can be returned by a for/in loop)</li>
@@ -159,11 +161,11 @@ p.x   // undefined, spread operator only spreads own properties, not inherited o
 
 					<p className="card-section">Creating Objects</p>
 					<ul>
-						<li>Objects can be created with object literals, with the <strong>new</strong> keyword and with the <strong>Object.create()</strong> function.</li>
+						<li>Objects can be created with object literals, with the <Accent>new</Accent> keyword and with the <Accent>Object.create()</Accent> function.</li>
 						<li>Prototypes - almost every JS object has a second JS object associated with it (prototype), and the first object inherits properties from the prototype. Can refer to it with Object.prototype. Objects created from literal and with new inherit from prototype. Object.prototype is one of the rare objects that has no prototype. Example: Date.prototype inherits properties from Object.prototype, so a Date object created by new Date() inherits both Date.prototype and Object.prototype (prototype chain).</li>
 						<li>Object.create() can be used to guard against unintended modifications of an object by a library function. Pass the object that inherits from it.</li>
 					</ul>
-					<div className="code"><pre>{createCode}</pre></div>
+					<SyntaxHighlighter language="javascript">{createCode}</SyntaxHighlighter>
 
 					<p className="card-section">Querying and Setting Properties</p>
 					<ul>
@@ -181,18 +183,18 @@ p.x   // undefined, spread operator only spreads own properties, not inherited o
 							</ul>
 						</li>
 					</ul>
-					<div className="code"><pre>{queryCode}</pre></div>
+					<SyntaxHighlighter language="javascript">{queryCode}</SyntaxHighlighter>
 
 					<p className="card-section">Deleting Properties</p>
 					<ul>
-						<li>Use <strong>delete</strong> operator. Only deletes own properties, not inherited ones. To delete inherited properties, must delete it from the prototype object, which affects all objects that inherit from that prototype.</li>
-						<li><strong>delete</strong> does not remove properties that have a configurable attribute of false.</li>
+						<li>Use <Accent>delete</Accent> operator. Only deletes own properties, not inherited ones. To delete inherited properties, must delete it from the prototype object, which affects all objects that inherit from that prototype.</li>
+						<li><Accent>delete</Accent> does not remove properties that have a configurable attribute of false.</li>
 					</ul>
-					<div className="code"><pre>{deleteCode}</pre></div>
+					<SyntaxHighlighter language="javascript">{deleteCode}</SyntaxHighlighter>
 
 					<p className="card-section">Testing Properties</p>
-					<p>Testing membership with <strong>in</strong>, <strong>hasOwnProperty()</strong> and <strong>propertyIsEnumerable()</strong> (is own and enumerable).</p>
-					<div className="code"><pre>{testingCode}</pre></div>
+					<p>Testing membership with <Accent>in</Accent>, <Accent>hasOwnProperty()</Accent> and <Accent>propertyIsEnumerable()</Accent> (is own and enumerable).</p>
+					<SyntaxHighlighter language="javascript">{testingCode}</SyntaxHighlighter>
 
 					<p className="card-section">Enumerating Properties</p>
 					<ul>
@@ -200,20 +202,20 @@ p.x   // undefined, spread operator only spreads own properties, not inherited o
 						<li>
 							Functions used to get an array of property names:
 							<ul>
-								<li><strong>Object.keys()</strong> returns an array of names of enumerable own properties of an object. Does not include inherited props or symbols.</li>
-								<li><strong>Object.getOwnPropertyNames()</strong> returns an array of the names of non-enumerable own properties as well (string names).</li>
-								<li><strong>Object.getOwnPropertySymbols()</strong> returns own properties whose names are symbols, enumerable or not.</li>
-								<li><strong>Reflect.ownKeys()</strong> returns all own prop names, enumerable or not, string and symbols.</li>
+								<li><Accent>Object.keys()</Accent> returns an array of names of enumerable own properties of an object. Does not include inherited props or symbols.</li>
+								<li><Accent>Object.getOwnPropertyNames()</Accent> returns an array of the names of non-enumerable own properties as well (string names).</li>
+								<li><Accent>Object.getOwnPropertySymbols()</Accent> returns own properties whose names are symbols, enumerable or not.</li>
+								<li><Accent>Reflect.ownKeys()</Accent> returns all own prop names, enumerable or not, string and symbols.</li>
 							</ul>
 						</li>
 					</ul>
-					<div className="code"><pre>{enumerateCode}</pre></div>
+					<SyntaxHighlighter language="javascript">{enumerateCode}</SyntaxHighlighter>
 
 					<p className="card-section">Extending Objects</p>
 					<ul>
-						<li>Can copy properties from one object to another with simple code or using <strong>Object.assign()</strong>.</li>
+						<li>Can copy properties from one object to another with simple code or using <Accent>Object.assign()</Accent>.</li>
 					</ul>
-					<div className="code"><pre>{extendCode}</pre></div>
+					<SyntaxHighlighter language="javascript">{extendCode}</SyntaxHighlighter>
 
 					<p className="card-section">Serializing Objects</p>
 					<ul>
@@ -222,16 +224,16 @@ p.x   // undefined, spread operator only spreads own properties, not inherited o
 						<li>Date objects serialized to ISO-formatted date strings, and parse leaves them in string form, does not restore date object.</li>
 						<li>Function, RegExp, Error, undefined cannot be serialized or restored. They are omitted from the string at serialization.</li>
 					</ul>
-					<div className="code"><pre>{serializeCode}</pre></div>
+					<SyntaxHighlighter language="javascript">{serializeCode}</SyntaxHighlighter>
 
 					<p className="card-section">Object Methods</p>
 					<ul>
 						<li>Replacing prototype methods with other implementation.</li>
 					</ul>
-					<div className="code"><pre>{replaceCode}</pre></div>
+					<SyntaxHighlighter language="javascript">{replaceCode}</SyntaxHighlighter>
 
 					<p className="card-section">Extended Object Literal Syntax</p>
-					<div className="code"><pre>{extendedSyntaxCode}</pre></div>
+					<SyntaxHighlighter language="javascript">{extendedSyntaxCode}</SyntaxHighlighter>
 				</>
 			}
 		</div>

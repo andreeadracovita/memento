@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
@@ -41,9 +42,9 @@ const iterative = `int fibonacci(int n) {
 				toggle &&
 				<>
 					<p>Take a recursive problem and find the overlapping subproblems. Then cache the results for future recursive calls.</p>
-					<pre>{code}</pre>
+					<SyntaxHighlighter language="java">{code}</SyntaxHighlighter>
 					<p>By going bottom-up, we realize that only the last 2 values need to be saved, so no more array is needed for memoization. Space: O(1), Time: O(N)</p>
-					<pre>{iterative}</pre>
+					<SyntaxHighlighter language="java">{iterative}</SyntaxHighlighter>
 				</>
 			}
 		</div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function Functions() {
@@ -115,12 +116,12 @@ factorial(5)      // => 120: also caches values for 4, 3, 2 and 1.
 				<>
 					<ul>
 						<li>Function = block of JS code that is defined once but may be executed any number of times.</li>
-						<li>If a function is assigned as a property of an object, it is called <strong>method</strong>.</li>
+						<li>If a function is assigned as a property of an object, it is called <Accent>method</Accent>.</li>
 						<li>Constructors = functions for initializing a newly created object.</li>
 						<li>JS can assign functions to variables and pass them to other functions.</li>
 						<li>Difference between f() (declaration form) and assigning a function to variable f: in declaration form, function objects are created before the code that contains them starts to run, function objects are created before the code that contains them starts to run - these functions do not exist until the expression that defines them are actually evaluated.</li>
-						<li>Lexical scoping - functions are executed using the variable scope that was in effect when they were defined, not the variable scope that is in effect when they are invoked. This combination of a function object and a scope (a set of variable bindings) in which the function’s variables are resolved is called a <strong>closure</strong> in the computer science literature.</li>
-						<li><strong>Functional programming</strong> - manipulate functions as objects.</li>
+						<li>Lexical scoping - functions are executed using the variable scope that was in effect when they were defined, not the variable scope that is in effect when they are invoked. This combination of a function object and a scope (a set of variable bindings) in which the function’s variables are resolved is called a <Accent>closure</Accent> in the computer science literature.</li>
+						<li><Accent>Functional programming</Accent> - manipulate functions as objects.</li>
 						<li>Higher-order function - function that works on functions, taking one or more functions as arguments and returning a function.</li>
 					</ul>
 					<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>

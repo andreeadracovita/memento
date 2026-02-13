@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function SystemDesignScalability() {
@@ -34,9 +35,9 @@ export default function SystemDesignScalability() {
 					<p className="bold">Database Partitioning (Sharding)</p>
 					<p>Sharding - splitting the data across multiple machines while ensuring you have a way of figuring out which data is on which machine.</p>
 					<ul>
-						<li><strong>Vertical Partitioning</strong> - by feature. Example: if building a social network, one partition for tables relating to profiles, another for messages, etc. Drawback: if one partition gets very large, might need to repartition that database.</li>
-						<li><strong>Key-Based (Hash-Based) Partitioning</strong> - uses some part of the data (eg. ID) to partition it. Example: allocate N servers and put the data on mod(key, n). Issue: the number of servers you have is fixed. Adding additional servers means reallocating all the data - a very expensive task.</li>
-						<li><strong>Directory-Based Partitioning</strong> - can maintain a lookup table for where the data can be found. Relatively easy to add additional servers, but it comes with two major drawbacks: the lookup table can be a single point of failure and constantly accessing this table impact performance.</li>
+						<li><Accent>Vertical Partitioning</Accent> - by feature. Example: if building a social network, one partition for tables relating to profiles, another for messages, etc. Drawback: if one partition gets very large, might need to repartition that database.</li>
+						<li><Accent>Key-Based (Hash-Based) Partitioning</Accent> - uses some part of the data (eg. ID) to partition it. Example: allocate N servers and put the data on mod(key, n). Issue: the number of servers you have is fixed. Adding additional servers means reallocating all the data - a very expensive task.</li>
+						<li><Accent>Directory-Based Partitioning</Accent> - can maintain a lookup table for where the data can be found. Relatively easy to add additional servers, but it comes with two major drawbacks: the lookup table can be a single point of failure and constantly accessing this table impact performance.</li>
 					</ul>
 					<p>Can use multiple partitioning schemes.</p>
 
@@ -50,9 +51,9 @@ export default function SystemDesignScalability() {
 
 					<p className="bold">Networking Metrics</p>
 					<ul>
-						<li><strong>Bandwidth</strong>: maximum amount of data that can be transferred in a unit of time. Typically expressed in bits/GB per second.</li>
-						<li><strong>Throughput</strong>: the actual amount of data that is transferred per second.</li>
-						<li><strong>Latency</strong>: how long it takes data to go from one end to the other. Delay between the sender of data and the receiver.</li>
+						<li><Accent>Bandwidth</Accent>: maximum amount of data that can be transferred in a unit of time. Typically expressed in bits/GB per second.</li>
+						<li><Accent>Throughput</Accent>: the actual amount of data that is transferred per second.</li>
+						<li><Accent>Latency</Accent>: how long it takes data to go from one end to the other. Delay between the sender of data and the receiver.</li>
 					</ul>
 
 					<p className="bold">MapReduce</p>
@@ -62,18 +63,18 @@ export default function SystemDesignScalability() {
 						<li>Reduce takes a key and a set of associated values and "reduces" them in some way, emitting a new key and value. The result may be fed back into the Reduce program for more reducing.</li>
 					</ul>
 					<p>Allows a lot of processing in parallel, makes processing huge amounts of data more scalable.</p>
-					<p><strong>Example: word count problem</strong>. Process a large text corpus to count the frequency of each word.</p>
+					<p><Accent>Example: word count problem</Accent>. Process a large text corpus to count the frequency of each word.</p>
 					<ul>
-						<li>The <strong>mapper function</strong> processes each line of text, splits it into individual words, and emits each word as a key with a value of 1.</li>
-						<li>The <strong>reducer function</strong> then aggregates these key-value pairs by summing the counts for each unique word, producing the final output of word frequencies.</li>
+						<li>The <Accent>mapper function</Accent> processes each line of text, splits it into individual words, and emits each word as a key with a value of 1.</li>
+						<li>The <Accent>reducer function</Accent> then aggregates these key-value pairs by summing the counts for each unique word, producing the final output of word frequencies.</li>
 					</ul>
 
 					<p className="card-section">Considerations</p>
 					<ul>
-						<li><strong>Failures</strong>: any part of the system can vail. Need to plan for many or all of these failures.</li>
-						<li><strong>Availability and Reliability</strong>: availability is a function of the percentage of time the system is operational. Reliability is a function of the probability that the ssytem is operational for a certain unit of time.</li>
-						<li><strong>Read-heavy vs. Write-heavy</strong>: impacts the design. If write-heavy, queue up the writes, must think about the potential failures. If read-heavy, might need to cache.</li>
-						<li><strong>Security</strong>: think about the types of issues a system might face and design around those.</li>
+						<li><Accent>Failures</Accent>: any part of the system can vail. Need to plan for many or all of these failures.</li>
+						<li><Accent>Availability and Reliability</Accent>: availability is a function of the percentage of time the system is operational. Reliability is a function of the probability that the ssytem is operational for a certain unit of time.</li>
+						<li><Accent>Read-heavy vs. Write-heavy</Accent>: impacts the design. If write-heavy, queue up the writes, must think about the potential failures. If read-heavy, might need to cache.</li>
+						<li><Accent>Security</Accent>: think about the types of issues a system might face and design around those.</li>
 					</ul>
 
 					<p className="card-section">There is no "perfect" system</p>

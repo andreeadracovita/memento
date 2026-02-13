@@ -1,5 +1,7 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function BitManipulation() {
@@ -46,7 +48,7 @@ int updateBit(int num, int i, bool bitIs1) {
 				<>
 					<p>Rusty? Some exercises:</p>
 					<pre>{bitExercises}</pre>
-					<p className="card-section"><strong>Tricks</strong></p>
+					<p className="card-section">Tricks</p>
 					<ul>
 						<li>0110 + 0110 = 2 * 0110 = 0110 &lt; &lt; 1</li>
 						<li>0100 * 0011 = 4 * 0011 = 0011 &lt; &lt; 2</li>
@@ -67,7 +69,7 @@ int updateBit(int num, int i, bool bitIs1) {
 					</ul>
 
 					<p className="card-section">Common Bit Tasks: Get, Set, Clear, Update</p>
-					<pre>{bitTasks}</pre>
+					<SyntaxHighlighter language="java">{bitTasks}</SyntaxHighlighter>
 				</>
 			}
 		</div>

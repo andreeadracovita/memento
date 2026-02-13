@@ -1,3 +1,5 @@
+import Accent from "components/Accent";
+
 import Array from "components/jsLibrary/Array";
 import AsynchronousJS from "components/jsLibrary/AsyncJS";
 import Classes from "components/jsLibrary/Classes";
@@ -47,7 +49,7 @@ export default function JSLibrary() {
 
 			<General />
 
-			<p><strong>Reference</strong></p>
+			<p>Reference</p>
 			<a href="https://learning.oreilly.com/library/view/javascript-the-definitive/9781491952016/" target="_blank">
 				JavaScript: The Definitive Guide, 7th Edition
 			</a>

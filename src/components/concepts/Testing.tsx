@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function Testing() {
@@ -15,7 +16,7 @@ export default function Testing() {
 			{
 				toggle &&
 				<>
-					<p><strong>Motto</strong>: Expect abuse and plan for it.</p>
+					<p><Accent>Motto</Accent>: Expect abuse and plan for it.</p>
 					<p>Approach the problem in a structured manner, not just list everything.</p>
 					<ul>
 						<li>Manual vs. Automated Testing</li>

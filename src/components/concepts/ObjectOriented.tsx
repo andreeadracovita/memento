@@ -1,5 +1,7 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function ObjectOriented() {
@@ -41,10 +43,10 @@ export default function ObjectOriented() {
 					<p>4. Investigate Actions</p>
 
 					<p className="card-section">Design Patters</p>
-					<p><strong>Singleton Class</strong></p>
-					<pre>{singleton}</pre>
-					<p><strong>Factory Method</strong></p>
-					<pre>{factory}</pre>
+					<p><Accent>Singleton Class</Accent></p>
+					<SyntaxHighlighter language="java">{singleton}</SyntaxHighlighter>
+					<p><Accent>Factory Method</Accent></p>
+					<SyntaxHighlighter language="java">{factory}</SyntaxHighlighter>
 				</>
 			}
 		</div>

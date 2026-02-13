@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import CardHeader from "../CardHeader";
+import CardHeader from "components/CardHeader";
+import Accent from "components/Accent";
 
 export default function BigO() {
 	const [toggle, setToggle] = useState(true);
@@ -15,8 +16,14 @@ export default function BigO() {
 			{
 				toggle &&
 				<>
-					<p>Big O Notation is a metric for determining the <strong>efficiency</strong> of an algorithm. It allows you to estimate how long your code will run on different sets of inputs and measure <strong>how effectively your code scales</strong> as the size of your input increases.</p>
-					<p>Big O, also known as Big O notation, represents an algorithm's <strong>worst-case</strong> complexity.</p>
+					<p>What is algorithmical time complexity?</p>
+					<p>The estimated amount of time required for a program to finish its job with regards to big input size.</p>
+					<p>3 different notations:</p>
+					<ul>
+						<li><Accent>O(n)</Accent>: Big O, worst case, the most commonly known and used by devs to assess theoretical performance</li>
+						<li><Accent>θ(n)</Accent>: Big Theta, average case, interchanged with O(n) to assess theoretical performance</li>
+						<li><Accent>Ω(n)</Accent>: Big Omega, best case, niche, can be powerful for heuristics</li>
+					</ul>
 				</>
 			}
 		</div>

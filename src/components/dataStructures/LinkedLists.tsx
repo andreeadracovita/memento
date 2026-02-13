@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function LinkedLists() {
@@ -15,9 +16,9 @@ export default function LinkedLists() {
 			{
 				toggle &&
 				<>
-					<p>A linked list is a <strong>linear collection of data elements</strong> whose order is not given by their physical placement in memory. In its most basic form, each node contains <strong>data and a reference to the next node</strong> in the sequence.</p>
+					<p>A linked list is a <Accent>linear collection of data elements</Accent> whose order is not given by their physical placement in memory. In its most basic form, each node contains <Accent>data and a reference to the next node</Accent> in the sequence.</p>
 					<p className="card-section">Benefits</p>
-					<p>Efficient insertion or removal of elements from any position in the sequence during iteration. More complex variants add <strong>additional links</strong>, allowing <strong>more efficient insertion or removal of nodes</strong> at arbitrary positions.</p>
+					<p>Efficient insertion or removal of elements from any position in the sequence during iteration. More complex variants add <Accent>additional links</Accent>, allowing <Accent>more efficient insertion or removal of nodes</Accent> at arbitrary positions.</p>
 					<p className="card-section">Drawbacks</p>
 					<p>Data access time is linear in respect to the number of nodes in the list</p>
 					<p>Faster access, such as random access, is not feasible. Arrays have better cache locality compared to linked lists.</p>

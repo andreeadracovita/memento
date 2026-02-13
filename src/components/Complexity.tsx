@@ -1,3 +1,5 @@
+import Accent from "components/Accent";
+
 import BigO from "./complexity/BigO";
 import Computing from "./complexity/Computing";
 import DataStructures from "./complexity/DataStructures";
@@ -18,7 +20,7 @@ export default function Complexity() {
 			<DataStructures />
 			<Sorting />
 
-			<p><strong>Reference</strong></p>
+			<p>Reference</p>
 			<a href="https://www.bigocheatsheet.com/" target="_blank">https://www.bigocheatsheet.com/</a>
 		</>
 	);

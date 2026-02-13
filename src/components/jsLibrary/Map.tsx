@@ -1,5 +1,7 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function Map() {
@@ -56,7 +58,7 @@ m.forEach((value, key) => { ... });`;
 				toggle &&
 				<>
 					<ul>
-						<li>Map = a set of values - <strong>keys</strong> - with <strong>values</strong> they are associated with.</li>
+						<li>Map = a set of values - <Accent>keys</Accent> - with <Accent>values</Accent> they are associated with.</li>
 						<li>Maps use arbitrary values as "indexes".</li>
 						<li>Looking up the value of a key will be fast no matter how large the map.</li>
 						<li>The optional argument to Map() constructor needs to be iterable, each element needs to be formatted as [key, value].</li>
@@ -66,7 +68,7 @@ m.forEach((value, key) => { ... });`;
 						<li></li>
 						<li></li>
 					</ul>
-					<pre>{code}</pre>
+					<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
 				</>
 			}
 		</div>

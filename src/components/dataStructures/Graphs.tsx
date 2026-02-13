@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
@@ -75,7 +76,7 @@ Node 2`;
 					<img src="graphics/graph.png" className="graphics" />
 					<p className="card-section">Graph as Adjacency List</p>
 					<p>Every vertex/node stores a list of adjacent vertices. In an undirected graph, an edge like (a, b) would be stored twice, once in a, once in b.</p>
-					<pre>{adjacencyList}</pre>
+					<SyntaxHighlighter language="java">{adjacencyList}</SyntaxHighlighter>
 					<p>Can also be implemented as an array/hash table of lists/arrays.</p>
 					<pre>{adjacencyListRepresentation}</pre>
 
@@ -92,12 +93,12 @@ Node 2`;
 					<p className="bold">Depth-First Search (DFS)</p>
 					<p>Start at the root (or any arbitrary node) and explore each branch completely before moving on to the next branch. Implemented with a stack or recursively.</p>
 					<p>Generally preferred when visiting every node in the graph.</p>
-					<pre>{dfsAlgorithm}</pre>
+					<SyntaxHighlighter language="java">{dfsAlgorithm}</SyntaxHighlighter>
 
 					<p className="bold">Breadth-First Search (BFS)</p>
 					<p>Start at the root (or any arbitrary node) and explore each neighbor before going on to any of their children. Implemented with a queue.</p>
 					<p>Generally preferred for finding the shortest path between two nodes.</p>
-					<pre>{bfsAlgorithm}</pre>
+					<SyntaxHighlighter language="java">{bfsAlgorithm}</SyntaxHighlighter>
 
 					<p className="bold">Bidirectional Search</p>
 					<p>Used to find the shortest path between a source and destination node. Runs 2 simultaneous BFS from each node. When the searches collide, we found a path. Careful with directed graphs (need to search counter-direction from end node).</p>

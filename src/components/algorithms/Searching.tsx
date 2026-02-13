@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
@@ -34,7 +35,7 @@ export default function Searching() {
 				toggle &&
 				<>
 					<p>Generally binary search: searching an element in a sorted array. Compare first to the midpoint. If smaller than midpoint, recursively search left, otherwise search right of the midpoint.</p>
-					<pre>{code}</pre>
+					<SyntaxHighlighter language="java">{code}</SyntaxHighlighter>
 					<p>Beyond binary search: binary tree, hash table, etc.</p>
 				</>
 			}

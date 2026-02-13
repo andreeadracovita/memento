@@ -31,6 +31,10 @@
   font-weight: 700;
 }
 
+.highlight {
+  background-color: #ffeb95;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;

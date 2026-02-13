@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
@@ -87,11 +88,11 @@ int partition(int[] arr, int left, int right) {
 					<hr />
 					<p className="bold">Merge Sort. Time: O(N log N) average and worst, Space: O(N)</p>
 					<p>Divide array in half, sort each half, merge them back together. Apply merge sort on each half (recursive). In the end, merging just 2 arrays of 1 element each (sorted by default).</p>
-					<pre>{mergeSort}</pre>
+					<SyntaxHighlighter language="java">{mergeSort}</SyntaxHighlighter>
 					<hr />
 					<p className="bold">Quick Sort. Time: O(N log N) average, O(N<sup>2</sup>) worst, Space: O(log N)</p>
 					<p>Pick a random element (pivot), partition the array such that left side contains element smaller or equal to the pivot and the right side contains elements larger than the pivot. In the worst case, we will always choose as pivot the smallest element (or the largest) resulting in O(N<sup>2</sup>) time.</p>
-					<pre>{quickSort}</pre>
+					<SyntaxHighlighter language="java">{quickSort}</SyntaxHighlighter>
 					<hr />
 					<p className="bold">Radix Sort. Time: O(KN)</p>
 					<p>Algorithm for integers that takes advantage of the fact that integers have a finite number of bits. Iterate through each digit of the number, grouping by each digit. K is the number of passes of the sorting algorithm.</p>

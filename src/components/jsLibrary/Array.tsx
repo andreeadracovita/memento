@@ -1,5 +1,7 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function Array() {
@@ -229,153 +231,153 @@ s[1]           // => "e"`;
 					<p>An array is an ordered collection of values. Each value is called an element, and each element has a numeric position in the array, known as its index.</p>
 					<p className="card-section">Characteristics</p>
 					<ul>
-						<li>JavaScript arrays are <strong>resizable</strong> and can contain a <strong>mix of different data types</strong>. (When those characteristics are undesirable, use <strong>typed arrays</strong> instead.)</li>
+						<li>JavaScript arrays are <Accent>resizable</Accent> and can contain a <Accent>mix of different data types</Accent>. (When those characteristics are undesirable, use <Accent>typed arrays</Accent> instead.)</li>
 						<li>JavaScript arrays are not associative arrays and so, array elements cannot be accessed using arbitrary strings as indexes, but must be accessed using non-negative integers (or their respective string form) as indexes.</li>
 						<li>JavaScript arrays are zero-indexed: the first element of an array is at index 0, the second is at index 1, and so on — and the last element is at the value of the array's length property minus 1.</li>
-						<li>JavaScript array-copy operations create <strong>shallow copies</strong>. (All standard built-in copy operations with any JavaScript objects create shallow copies, rather than deep copies).</li>
+						<li>JavaScript array-copy operations create <Accent>shallow copies</Accent>. (All standard built-in copy operations with any JavaScript objects create shallow copies, rather than deep copies).</li>
 					</ul>
 					<p className="card-section">Creating Arrays</p>
-					<div className="code"><pre>{createArray}</pre></div>
+					<SyntaxHighlighter language="javascript">{createArray}</SyntaxHighlighter>
 
 					<p className="card-section">Adding and Deleting Array Elements</p>
-					<div className="code"><pre>{addDelete}</pre></div>
+					<SyntaxHighlighter language="javascript">{addDelete}</SyntaxHighlighter>
 
 					<p className="card-section">Iterating Arrays</p>
-					<div className="code"><pre>{iterate}</pre></div>
+					<SyntaxHighlighter language="javascript">{iterate}</SyntaxHighlighter>
 
 					<p className="card-section">Array Methods</p>
 					<ul>
 						<li>
-							<strong>Array Iterator Methods</strong> - all accept a function as first argument and invoke that function for each element of the array (for sparse arrays, function is not invoked for nonexistent elements). None of those methods modify the array, unless explicitly doing so.
+							<Accent>Array Iterator Methods</Accent> - all accept a function as first argument and invoke that function for each element of the array (for sparse arrays, function is not invoked for nonexistent elements). None of those methods modify the array, unless explicitly doing so.
 							<ul>
 								<li>
-									<p><strong>forEach()</strong></p>
-									<div className="code"><pre>{forEachCode}</pre></div>
+									<p><Accent>forEach()</Accent></p>
+									<SyntaxHighlighter language="javascript">{forEachCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>map()</strong></p>
-									<div className="code"><pre>{mapCode}</pre></div>
+									<p><Accent>map()</Accent></p>
+									<SyntaxHighlighter language="javascript">{mapCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>filter()</strong></p>
-									<div className="code"><pre>{filterCode}</pre></div>
+									<p><Accent>filter()</Accent></p>
+									<SyntaxHighlighter language="javascript">{filterCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>find() and findIndex()</strong> - if not found, find returns undefined, and findIndex -1</p>
-									<div className="code"><pre>{findFindIndexCode}</pre></div>
+									<p><Accent>find() and findIndex()</Accent> - if not found, find returns undefined, and findIndex -1</p>
+									<SyntaxHighlighter language="javascript">{findFindIndexCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>every() and some()</strong> - return true or false</p>
-									<div className="code"><pre>{everyCode}</pre></div>
-									<div className="code"><pre>{someCode}</pre></div>
+									<p><Accent>every() and some()</Accent> - return true or false</p>
+									<SyntaxHighlighter language="javascript">{everyCode}</SyntaxHighlighter>
+									<SyntaxHighlighter language="javascript">{someCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>reduce() and reduceRight()</strong> - inject and fold, reduceRight is like reduce but right-to-left for associativity purposes</p>
-									<div className="code"><pre>{reduceCode}</pre></div>
-									<div className="code"><pre>{reduceRightCode}</pre></div>
+									<p><Accent>reduce() and reduceRight()</Accent> - inject and fold, reduceRight is like reduce but right-to-left for associativity purposes</p>
+									<SyntaxHighlighter language="javascript">{reduceCode}</SyntaxHighlighter>
+									<SyntaxHighlighter language="javascript">{reduceRightCode}</SyntaxHighlighter>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<strong>Flattening arrays with flat() and flatMap()</strong> - creates and returns a new array that contains the same elements as the array it is called on, except that the elements that are themselves arrays are "flattened" into the returned array.
+							<Accent>Flattening arrays with flat() and flatMap()</Accent> - creates and returns a new array that contains the same elements as the array it is called on, except that the elements that are themselves arrays are "flattened" into the returned array.
 							<ul>
 								<li>
-									<p><strong>flat()</strong></p>
-									<div className="code"><pre>{flatCode}</pre></div>
+									<p><Accent>flat()</Accent></p>
+									<SyntaxHighlighter language="javascript">{flatCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>flatMap()</strong></p>
-									<div className="code"><pre>{flatMapCode}</pre></div>
+									<p><Accent>flatMap()</Accent></p>
+									<SyntaxHighlighter language="javascript">{flatMapCode}</SyntaxHighlighter>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<strong>Adding arrays with concat()</strong> - creates and returns a new array that contains the elements of the original array on which concat() was invoked. If the purpose of concat() is <pre>a = a.concat(x)</pre>, then <pre>push()</pre> or <pre>splice()</pre> should be used.
-							<div className="code"><pre>{concatCode}</pre></div>
+							<Accent>Adding arrays with concat()</Accent> - creates and returns a new array that contains the elements of the original array on which concat() was invoked. If the purpose of concat() is <pre>a = a.concat(x)</pre>, then <pre>push()</pre> or <pre>splice()</pre> should be used.
+							<SyntaxHighlighter language="javascript">{concatCode}</SyntaxHighlighter>
 						</li>
 						<li>
-							<strong>Stacks and Queues with push(), pop(), shift(), and unshift()</strong> - methods that allow work with arrays as if they were stacks or queues. For <strong>stack</strong> - use push() and pop(). For <strong>queue</strong> - use push() and shift().
+							<Accent>Stacks and Queues with push(), pop(), shift(), and unshift()</Accent> - methods that allow work with arrays as if they were stacks or queues. For <Accent>stack</Accent> - use push() and pop(). For <Accent>queue</Accent> - use push() and shift().
 							<ul>
 								<li>
-									<p><strong>push()</strong> - method appends one or more new elements to the end of an array and returns the new length of the array</p>
+									<p><Accent>push()</Accent> - method appends one or more new elements to the end of an array and returns the new length of the array</p>
 								</li>
 								<li>
-									<p><strong>pop()</strong> - deletes the last element of an array, decrements the array length, and returns the value that it removed</p>
-									<div className="code"><pre>{pushPopCode}</pre></div>
+									<p><Accent>pop()</Accent> - deletes the last element of an array, decrements the array length, and returns the value that it removed</p>
+									<SyntaxHighlighter language="javascript">{pushPopCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>shift()</strong> - removes and returns the first element of the array, shifting all subsequent elements down one place to occupy the newly vacant space at the start of the array</p>
-									<div className="code"><pre>{shiftCode}</pre></div>
+									<p><Accent>shift()</Accent> - removes and returns the first element of the array, shifting all subsequent elements down one place to occupy the newly vacant space at the start of the array</p>
+									<SyntaxHighlighter language="javascript">{shiftCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>unshift()</strong> - adds an element or elements to the beginning of the array, shifts the existing array elements up to higher indexes to make room, and returns the new length of the array</p>
-									<div className="code"><pre>{unshiftCode}</pre></div>
+									<p><Accent>unshift()</Accent> - adds an element or elements to the beginning of the array, shifts the existing array elements up to higher indexes to make room, and returns the new length of the array</p>
+									<SyntaxHighlighter language="javascript">{unshiftCode}</SyntaxHighlighter>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<strong>Subarrays with slice(), splice(), fill(), and copyWithin()</strong> - methods that work on contiguous regions, or subarrays or “slices” of an array (extracting, replacing, filling, and copying slices).
+							<Accent>Subarrays with slice(), splice(), fill(), and copyWithin()</Accent> - methods that work on contiguous regions, or subarrays or “slices” of an array (extracting, replacing, filling, and copying slices).
 							<ul>
 								<li>
-									<p><strong>slice()</strong> - returns a slice, or subarray, of the specified array. Its two arguments specify the start and end of the slice to be returned. If only one argument is specified, the returned array contains all elements from the start position to the end of the array. If either argument is negative, it specifies an array element relative to the length of the array. Does not modify the array.</p>
-									<div className="code"><pre>{sliceCode}</pre></div>
+									<p><Accent>slice()</Accent> - returns a slice, or subarray, of the specified array. Its two arguments specify the start and end of the slice to be returned. If only one argument is specified, the returned array contains all elements from the start position to the end of the array. If either argument is negative, it specifies an array element relative to the length of the array. Does not modify the array.</p>
+									<SyntaxHighlighter language="javascript">{sliceCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>splice()</strong> - general-purpose method for inserting or removing elements from an array. Modifies the array. The first argument to splice() specifies the array position at which the insertion and/or deletion is to begin. The second argument specifies the number of elements that should be deleted from (spliced out of) the array. If this second argument is omitted, all array elements from the start element to the end of the array are removed.</p>
-									<div className="code"><pre>{spliceCode}</pre></div>
+									<p><Accent>splice()</Accent> - general-purpose method for inserting or removing elements from an array. Modifies the array. The first argument to splice() specifies the array position at which the insertion and/or deletion is to begin. The second argument specifies the number of elements that should be deleted from (spliced out of) the array. If this second argument is omitted, all array elements from the start element to the end of the array are removed.</p>
+									<SyntaxHighlighter language="javascript">{spliceCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>fill()</strong> - sets the elements of an array, or a slice of an array, to a specified value. It mutates the array it is called on, and also returns the modified array. The first argument to fill() is the value to set array elements to. The optional second argument specifies the starting index. If omitted, filling starts at index 0. The optional third argument specifies the ending index—array elements up to, but not including, this index will be filled. If this argument is omitted, then the array is filled from the start index to the end.</p>
-									<div className="code"><pre>{fillCode}</pre></div>
+									<p><Accent>fill()</Accent> - sets the elements of an array, or a slice of an array, to a specified value. It mutates the array it is called on, and also returns the modified array. The first argument to fill() is the value to set array elements to. The optional second argument specifies the starting index. If omitted, filling starts at index 0. The optional third argument specifies the ending index—array elements up to, but not including, this index will be filled. If this argument is omitted, then the array is filled from the start index to the end.</p>
+									<SyntaxHighlighter language="javascript">{fillCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>copyWithin()</strong> - copies a slice of an array to a new position within the array. It modifies the array in place and returns the modified array, but it will not change the length of the array. The first argument specifies the destination index to which the first element will be copied. The second argument specifies the index of the first element to be copied. If this second argument is omitted, 0 is used. The third argument specifies the end of the slice of elements to be copied. If omitted, the length of the array is used. Elements from the start index up to, but not including, the end index will be copied. intended as a <strong>high-performance method</strong> that is particularly useful with typed arrays.</p>
-									<div className="code"><pre>{copyWithinCode}</pre></div>
+									<p><Accent>copyWithin()</Accent> - copies a slice of an array to a new position within the array. It modifies the array in place and returns the modified array, but it will not change the length of the array. The first argument specifies the destination index to which the first element will be copied. The second argument specifies the index of the first element to be copied. If this second argument is omitted, 0 is used. The third argument specifies the end of the slice of elements to be copied. If omitted, the length of the array is used. Elements from the start index up to, but not including, the end index will be copied. intended as a <Accent>high-performance method</Accent> that is particularly useful with typed arrays.</p>
+									<SyntaxHighlighter language="javascript">{copyWithinCode}</SyntaxHighlighter>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<strong>Array Searching and Sorting Methods</strong>
+							<Accent>Array Searching and Sorting Methods</Accent>
 							<ul>
 								<li>
-									<p><strong>indexOf() and lastIndexOf()</strong> - search an array for an element with a specified value and return the index of the first such element found, or -1 if none is found. Can take a second parameter - from what index to start the search.</p>
-									<div className="code"><pre>{indexLastIndexOfCode}</pre></div>
+									<p><Accent>indexOf() and lastIndexOf()</Accent> - search an array for an element with a specified value and return the index of the first such element found, or -1 if none is found. Can take a second parameter - from what index to start the search.</p>
+									<SyntaxHighlighter language="javascript">{indexLastIndexOfCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>includes()</strong> - method takes a single argument and returns true if the array contains that value or false otherwise.</p>
-									<div className="code"><pre>{includesCode}</pre></div>
+									<p><Accent>includes()</Accent> - method takes a single argument and returns true if the array contains that value or false otherwise.</p>
+									<SyntaxHighlighter language="javascript">{includesCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>sort()</strong> - sorts the elements of an array in place and returns the sorted array. To sort an array into some order other than alphabetical, you must pass a comparison function as an argument to sort().</p>
-									<div className="code"><pre>{sortCode}</pre></div>
+									<p><Accent>sort()</Accent> - sorts the elements of an array in place and returns the sorted array. To sort an array into some order other than alphabetical, you must pass a comparison function as an argument to sort().</p>
+									<SyntaxHighlighter language="javascript">{sortCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>reverse()</strong></p>
-									<div className="code"><pre>{reverseCode}</pre></div>
+									<p><Accent>reverse()</Accent></p>
+									<SyntaxHighlighter language="javascript">{reverseCode}</SyntaxHighlighter>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<strong>Array to String Conversions</strong>
+							<Accent>Array to String Conversions</Accent>
 							<ul>
 								<li>
-									<p><strong>join()</strong> - method converts all the elements of an array to strings and concatenates them, returning the resulting string. You can specify an optional string that separates the elements in the resulting string. If no separator string is specified, a comma is used.</p>
-									<div className="code"><pre>{joinCode}</pre></div>
+									<p><Accent>join()</Accent> - method converts all the elements of an array to strings and concatenates them, returning the resulting string. You can specify an optional string that separates the elements in the resulting string. If no separator string is specified, a comma is used.</p>
+									<SyntaxHighlighter language="javascript">{joinCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>toString()</strong></p>
-									<div className="code"><pre>{toStringCode}</pre></div>
+									<p><Accent>toString()</Accent></p>
+									<SyntaxHighlighter language="javascript">{toStringCode}</SyntaxHighlighter>
 								</li>
 								<li>
-									<p><strong>toLocaleString()</strong> - the localized version of toString(). It converts each array element to a string by calling the toLocaleString() method of the element, and then it concatenates the resulting strings using a locale-specific (and implementation-defined) separator string.</p>
+									<p><Accent>toLocaleString()</Accent> - the localized version of toString(). It converts each array element to a string by calling the toLocaleString() method of the element, and then it concatenates the resulting strings using a locale-specific (and implementation-defined) separator string.</p>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<strong>Static Array Functions</strong> - 
+							<Accent>Static Array Functions</Accent> - 
 							<ul>
-								<li><strong>Array.of()</strong> and <strong>Array.from()</strong> are factory methods for creating new arrays.</li>
-								<li><strong>Array.isArray()</strong></li>
+								<li><Accent>Array.of()</Accent> and <Accent>Array.from()</Accent> are factory methods for creating new arrays.</li>
+								<li><Accent>Array.isArray()</Accent></li>
 							</ul>
 						</li>
 					</ul>
@@ -387,11 +389,11 @@ s[1]           // => "e"`;
 						<li>Arrays inherit useful methods from Array.prototype.</li>
 						<li>Array.isArray() returns true for arrays.</li>
 					</ul>
-					<div className="code"><pre>{arrayLikeObjectsCode}</pre></div>
+					<SyntaxHighlighter language="javascript">{arrayLikeObjectsCode}</SyntaxHighlighter>
 
 					<p className="card-section">Strings as Arrays</p>
 					<p>JavaScript strings behave like read-only arrays of UTF-16 Unicode characters. Instead of accessing individual characters with the charAt() method, you can use square brackets:</p>
-					<div className="code"><pre>{stringsCode}</pre></div>
+					<SyntaxHighlighter language="javascript">{stringsCode}</SyntaxHighlighter>
 					<p>The fact that strings behave like arrays also means, however, that we can apply generic array methods to them.</p>
 				</>
 			}

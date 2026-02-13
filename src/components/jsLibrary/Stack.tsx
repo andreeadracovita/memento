@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
@@ -52,10 +53,10 @@ class myStack {
 					<p>The Array object in JavaScript includes methods like push() and pop(), which correspond directly to the fundamental operations of a stack: adding an element to the top (push) and removing the top element (pop).</p>
 					<p>This allows developers to use an array to simulate a stack, adhering to the Last-In, First-Out (LIFO) principle where the last element added is the first one removed.</p>
 					<p className="card-section">Implementing Stack as Array</p>
-					<pre>{codeArray}</pre>
+					<SyntaxHighlighter language="javascript">{codeArray}</SyntaxHighlighter>
 
 					<p className="card-section">Implementing Stack as Linked List</p>
-					<pre>{codeList}</pre>
+					<SyntaxHighlighter language="javascript">{codeList}</SyntaxHighlighter>
 				</>
 			}
 		</div>
