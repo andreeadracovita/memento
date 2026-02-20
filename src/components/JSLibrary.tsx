@@ -1,5 +1,3 @@
-import Accent from "components/Accent";
-
 import Array from "components/jsLibrary/Array";
 import AsynchronousJS from "components/jsLibrary/AsyncJS";
 import Classes from "components/jsLibrary/Classes";

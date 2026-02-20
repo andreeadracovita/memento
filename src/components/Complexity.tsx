@@ -1,5 +1,3 @@
-import Accent from "components/Accent";
-
 import BigO from "./complexity/BigO";
 import Computing from "./complexity/Computing";
 import DataStructures from "./complexity/DataStructures";

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
-import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function BitManipulation() {
