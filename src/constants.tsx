@@ -61,5 +61,12 @@ export const pagesMap = new Map([
 			link: "/memento/java",
 			img: "icons/java.png"
 		}
+	],
+	[
+		"Problem Solving",
+		{
+			link: "/memento/problem-solving",
+			img: "icons/pencil.png"
+		}
 	]
 ]);
