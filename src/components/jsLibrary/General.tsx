@@ -18,15 +18,62 @@ export default function General() {
 				toggle &&
 				<>
 					<ul>
-						<li>Destructuring</li>
-						<li>Operators Table</li>
-						<li>In/instanceof</li>
-						<li>Statements - for/of, for/in</li>
-						<li>Internationalisation API</li>
-						<li>Timers</li>
-						<li>Iterators and Generators</li>
+						<li>
+							Destructuring
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
+						</li>
+						<li>
+							In/instanceof
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
+						</li>
+						<li>
+							Statements - for/of, for/in
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
+						</li>
+						<li>
+							Internationalisation API
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
+						</li>
+						<li>
+							Timers
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
+						</li>
+						<li>
+							Iterators and Generators
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
+						</li>
 					</ul>
-					<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
+					
 				</>
 			}
 		</div>

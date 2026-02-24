@@ -1,4 +1,3 @@
-import Accent from "components/Accent";
 import PsSection from "components/problemSolving/PsSection";
 
 export default function ProblemSolving() {
