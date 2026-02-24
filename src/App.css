@@ -213,3 +213,7 @@ a {
   width: 400px;
   max-width: 100%;
 }
+
+.graphics-lg {
+  width: 600px;
+}
