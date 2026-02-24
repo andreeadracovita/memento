@@ -42,10 +42,11 @@ export default function JSLibrary() {
 			<ErrorClasses />
 
 			<AsynchronousJS />
-			<JSWebBrowsers />
-			<Node />
 
 			<General />
+
+			<JSWebBrowsers />
+			<Node />
 
 			<p>Reference</p>
 			<a href="https://learning.oreilly.com/library/view/javascript-the-definitive/9781491952016/" target="_blank">

@@ -10,7 +10,7 @@ export default function General() {
 	return (
 		<div className="grey-card">
 			<CardHeader
-				title={"General"}
+				title={"Misc: iterators, generators, timers & more"}
 				toggle={toggle}
 				handleToggle={() => setToggle(!toggle)}
 			/>
@@ -22,7 +22,7 @@ export default function General() {
 						<li>Operators Table</li>
 						<li>In/instanceof</li>
 						<li>Statements - for/of, for/in</li>
-						<li>Internationalization API</li>
+						<li>Internationalisation API</li>
 						<li>Timers</li>
 						<li>Iterators and Generators</li>
 					</ul>

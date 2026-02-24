@@ -11,6 +11,7 @@ import Home from "./components/Home";
 import HttpResponses from "./components/HttpResponses";
 import Navbar from "./components/Navbar";
 import React from "./components/React";
+import ProblemSolving from "./components/ProblemSolving";
 
 function App() {
 
@@ -23,11 +24,11 @@ function App() {
         <Route path="/memento/concepts" element={<Concepts />} />
         <Route path="/memento/data-structures" element={<DataStructures />} />
         <Route path="/memento/algorithms" element={<Algorithms />} />
-
         <Route path="/memento/js-library" element={<JSLibrary />} />
-        <Route path="/memento/java" element={<Java />} />
         <Route path="/memento/react" element={<React />} />
         <Route path="/memento/http-responses" element={<HttpResponses />} />
+        <Route path="/memento/java" element={<Java />} />
+        <Route path="/memento/problem-solving" element={<ProblemSolving />} />
       </Routes>
     </div>
   )
