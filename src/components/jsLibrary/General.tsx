@@ -73,13 +73,12 @@ const fuzzyMatcher = new Intl.Collator(undefined, {
     ignorePunctuation: true
 }).compare;
 let strings = ["food", "fool", "Føø Bar"];
-strings.findIndex(s => fuzzyMatcher(s, "foobar") === 0)  // => 2`
-	const code = ``;
+strings.findIndex(s => fuzzyMatcher(s, "foobar") === 0)  // => 2`;
 
 	return (
 		<div className="grey-card">
 			<CardHeader
-				title={"Misc: iterators, locales, timers & more"}
+				title={"Misc: destructuring, internationalisation API, timers"}
 				toggle={toggle}
 				handleToggle={() => setToggle(!toggle)}
 			/>
@@ -150,14 +149,6 @@ strings.findIndex(s => fuzzyMatcher(s, "foobar") === 0)  // => 2`
 						<li>Both setTimeout() and setInterval() return a value. If you save this value in a variable, you can then use it later to cancel the execution of the function by passing it to <Accent>clearTimeout()</Accent> or <Accent>clearInterval()</Accent>.</li>
 					</ul>
 					<SyntaxHighlighter language="javascript">{timerCode}</SyntaxHighlighter>
-
-					<p className="card-section">Iterators and Generators</p>
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-					<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
 				</>
 			}
 		</div>

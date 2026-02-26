@@ -6,6 +6,7 @@ import ErrorClasses from "components/jsLibrary/ErrorClasses";
 import Functions from "components/jsLibrary/Functions";
 import General from "components/jsLibrary/General";
 import HashTable from "components/jsLibrary/HashTable";
+import IteratorsGenerators from "components/jsLibrary/IteratorsGenerators";
 import JSWebBrowsers from "components/jsLibrary/JSWebBrowsers";
 import List from "components/jsLibrary/List";
 import Map from "components/jsLibrary/Map";
@@ -37,10 +38,9 @@ export default function JSLibrary() {
 
 			<Functions />
 			<Classes />
+			<IteratorsGenerators />
 			<Modules />
-
 			<ErrorClasses />
-
 			<AsynchronousJS />
 
 			<General />
