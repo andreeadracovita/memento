@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import classNames from "classnames";
 
 import { pagesMap } from "constants";
 
 export default function Navbar() {
-	const [tab, setTab] = useState(undefined);
+	const location = useLocation();
 
 	return (
 		<header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between my-3">
@@ -28,10 +28,9 @@ export default function Navbar() {
 								"text-uppercase",
 								"nav-link-override",
 								{
-									"selected-tab": index === tab
+									"selected-tab": entry[1].link === location.pathname
 								}
 							)}
-							onClick={() => setTab(index)}
 						>
 							{entry[0]}
 						</Link>
