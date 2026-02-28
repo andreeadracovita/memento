@@ -193,6 +193,15 @@ a {
 
 .nav-link-override:hover {
   color: var(--light-grey);
+  font-weight: 800;
+}
+
+.selected-tab {
+  /*outline: solid var(--accent-color);
+  outline-offset: -5px;*/
+  /*text-decoration: underline;*/
+  font-weight: 800;
+  color: var(--accent-color) !important; 
 }
 
 .suprascript {
