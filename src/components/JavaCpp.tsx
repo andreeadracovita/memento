@@ -1,6 +1,6 @@
-import Sample from "components/java/Sample";
+import Sample from "components/javaCpp/Sample";
 
-export default function Java() {
+export default function JavaCpp() {
 // 	const stackArray = `class myStack {
 
 //     // array to store elements
@@ -44,7 +44,7 @@ export default function Java() {
 
 	return (
 		<>
-			<h1 className="archivo-black-regular">Java</h1>
+			<h1 className="archivo-black-regular">Java & C++</h1>
 			<Sample />
 		</>
 	);

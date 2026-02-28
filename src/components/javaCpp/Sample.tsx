@@ -5,7 +5,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import CardHeader from "components/CardHeader";
 
 export default function Functions() {
-	const [toggle, setToggle] = useState(false);
+	const [toggle, setToggle] = useState(true);
 	const code = `// Java code here`;
 
 	return (
@@ -19,6 +19,7 @@ export default function Functions() {
 				toggle &&
 				<>
 					<ul>
+						<li>2 column side-by-side comparison and implementation of Java and C++</li>
 						<li>Memory management</li>
 						<li>Threading, concurrency, etc.</li>
 						<li>Boiler plate</li>

@@ -56,17 +56,17 @@ export const pagesMap = new Map([
 		}
 	],
 	[
-		"Java",
+		"Java & C++",
 		{
-			link: "/memento/java",
-			img: "icons/java.png"
+			link: "/memento/java-cpp",
+			img: "icons/java-cpp.png"
 		}
 	],
 	[
 		"Problem Solving",
 		{
 			link: "/memento/problem-solving",
-			img: "icons/pencil.png"
+			img: "icons/problem-solving.png"
 		}
 	]
 ]);
