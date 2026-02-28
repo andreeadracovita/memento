@@ -1,3 +1,5 @@
+import Sample from "components/java/Sample";
+
 export default function Java() {
 // 	const stackArray = `class myStack {
 
@@ -43,6 +45,7 @@ export default function Java() {
 	return (
 		<>
 			<h1 className="archivo-black-regular">Java</h1>
+			<Sample />
 		</>
 	);
 }
