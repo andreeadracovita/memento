@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 
 import { pagesMap } from "constants";
+import InitialCall from "components/home/InitialCall";
+import TechnicalScreening from "components/home/TechnicalScreening";
+import CodingInterview from "components/home/CodingInterview";
+import OnSiteInterviews from "components/home/OnSiteInterviews";
+import SalaryDiscussion from "components/home/SalaryDiscussion";
 
 export default function Home() {
 	
@@ -24,6 +29,12 @@ export default function Home() {
 				})
 			}
 			</div>
+
+			<InitialCall />
+			<TechnicalScreening />
+			<CodingInterview />
+			<OnSiteInterviews />
+			<SalaryDiscussion />
 		</>
 	);
 }

@@ -47,8 +47,23 @@ Hello <img src="x.png" onload="alert('hacked')"/>`;
 								<li>To load a web page, the browser makes network requests—using the HTTP and HTTPS protocols—for an HTML file as well as the files and resources it depends on. The network APIs used:</li>
 								<li>The <Accent>fetch()</Accent> method defines a Promise-based API for making HTTP and HTTPS requests. The fetch() API makes basic GET requests simple but has a comprehensive feature set that also supports just about any possible HTTP use case.</li>
 								<li>The <Accent>Server-Sent Events (or SSE) API</Accent> is a convenient, event-based interface to HTTP “long polling” techniques where the web server holds the network connection open so that it can send data to the client whenever it wants.</li>
-								<li><Accent>WebSockets</Accent> is a networking protocol that is not HTTP but is designed to interoperate with HTTP. It defines an <Accent>asynchronous message-passing API</Accent> where clients and servers can send and receive messages from each other in a way that is similar to TCP network sockets.</li>
+								<li><Accent>WebSockets</Accent> is a networking protocol that is not HTTP but is designed to interoperate with HTTP. It defines an <Accent>asynchronous message-passing API</Accent> where clients and servers can send and receive messages from each other in a way that is similar to TCP network sockets. Binary messages are supported, and messages can be sent in both directions, not just from server to client. Service specified with a URL, for example:
+									<SyntaxHighlighter language="javascript">
+										{`let socket = new WebSocket("wss://example.com/stockticker");`}
+									</SyntaxHighlighter>
+								</li>
 							</ul>
+						</li>
+						<li>
+							Client-side storage
+							<ul>
+								<li>Web storage: <Accent>localStorage</Accent>, <Accent>sessionStorage</Accent>. Persistent objects that map string keys to string values. Web Storage is very easy to use and is suitable for storing large (but not huge) amounts of data.</li>
+								<li><Accent>Cookies</Accent>: old client-side storage mechanism designed for use by server-side scripts. Suitable only for storing small amounts of textual data. Any data stored as cookies is always transmitted to the server with every HTTP request, even if the data is only of interest to the client.</li>
+								<li>IndexedDB</li>
+							</ul>
+						</li>
+						<li>
+							<Accent>Storage, Security and Privacy</Accent> -  Due to no actual encryption being safe from nosy users/spyware, no form of client-side storage should ever be used for passwords, financial account numbers, or other similarly sensitive information.
 						</li>
 						<li></li>
 					</ul>
