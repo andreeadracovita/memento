@@ -32,7 +32,7 @@
 }
 
 .highlight {
-  background-color: #ffeb95;
+  background-color: var(--accent-color); /* History: #ffeb95 */
 }
 
 body {
@@ -225,4 +225,12 @@ a {
 
 .graphics-lg {
   width: 600px;
+}
+
+.QA-collapse-header {
+  cursor: pointer;
+}
+
+.QA-collapse-header:hover {
+  background-color: var(--accent-color);
 }
