@@ -18,7 +18,6 @@ export default function Concepts() {
 					toggle={true}
 				/>
 				<pre>/* Click a question to reveal the answer */</pre>
-
 				<ul>
 					<li>
 						<span className="QA-collapse-header" data-bs-toggle="collapse" data-bs-target="#collapse-1">
@@ -105,7 +104,7 @@ export default function Concepts() {
 					</li>
 					<li>
 						<span className="QA-collapse-header" data-bs-toggle="collapse" data-bs-target="#collapse-8">
-							What is a process's in-memory layout & structure
+							What is a process' in-memory layout & structure
 						</span>
 						<ul className="collapse" id="collapse-8">
 							<li><Accent>Text Segment (Code)</Accent>: compiled machine code of the program, read-only. Loaded into memory when a program starts and remains unchanged during execution.</li>
@@ -162,7 +161,7 @@ export default function Concepts() {
 						<ul className="collapse" id="collapse-13">
 							<li>Communication between threads (inter thread communication) is achieved through <Accent>shared resources and synchronisation mechanisms</Accent> to coordinate execution and exchange data safely.</li>
 							<li><Accent>Shared memory</Accent>: threads within the same process share the same memory space, can read and write to shared variables and objects. Synchronisation needed to prevent race conditions.</li>
-							<li><Accent>Synchronisation and Wait/Notify</Accent>: wait(), notify(), notifyAll() (Java) methods in Object class, can be run in synchronized context. In C++, std::mutex, std::lock_guard, std::unique_lock ensure that only one thread can access a critical section at a time. JS is single-threaded, but multithreading is achievable using Web Workers (browser) or Worker Threads (Node.js) and communication is message-based (serialized).</li>
+							<li><Accent>Synchronisation and Wait/Notify</Accent>: wait(), notify(), notifyAll() (Java) methods in Object class, can be run in synchronized context. In C++, std::mutex, std::lock_guard, std::unique_lock ensure that only one thread can access a <Accent>critical section</Accent> at a time. JS is single-threaded, but multithreading is achievable using Web Workers (browser) or Worker Threads (Node.js) and communication is message-based (serialized).</li>
 							<li>Message-Based Mechanisms: blocking queues, pipelines, message queues to exchange data asynchronously.</li>
 							<li><Accent>Synchronisation Primitives</Accent>: OS and programming languages provide additional tools to manage access to shared resources and signal between threads: <Accent>semaphores, mutexes, condition variables, events</Accent>.</li>
 						</ul>
@@ -258,9 +257,9 @@ export default function Concepts() {
 							What other synchronisation primitives are there? How do they work?
 						</span>
 						<ul className="collapse" id="collapse-17">
-							<li>Condition variable: allows threads to wait for a specific condition to become true, often used with a mutex. Supports wait() and signal()/broadcast() to coordinate thread execution.</li>
-							<li>Barrier: synchronises a fixed group of threads at a specific point, ensuring all reach the barrier before any proceed.</li>
-							<li>Read-Write lock</li>
+							<li><Accent>Condition variable</Accent>: allows threads to wait for a specific condition to become true, often used with a mutex. Supports wait() and signal()/broadcast() to coordinate thread execution.</li>
+							<li><Accent>Barrier</Accent>: synchronises a fixed group of threads at a specific point, ensuring all reach the barrier before any proceed.</li>
+							<li><Accent>Read-Write lock</Accent></li>
 						</ul>
 					</li>
 					<li>
