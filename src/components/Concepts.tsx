@@ -1,5 +1,3 @@
-import SyntaxHighlighter from "react-syntax-highlighter";
-
 import Accent from "components/Accent";
 import BitManipulation from "components/concepts/BitManipulation";
 import Memory from "components/concepts/Memory";
@@ -16,6 +14,7 @@ export default function Concepts() {
 				<CardHeader
 					title={"Generic Computer Science Questions"}
 					toggle={true}
+					handleToggle={undefined}
 				/>
 				<pre>/* Click a question to reveal the answer */</pre>
 				<ul>

@@ -17,6 +17,7 @@ export default function DataStructures() {
 				<CardHeader
 					title={"Data Structures and Algorithms Questions"}
 					toggle={true}
+					handleToggle={undefined}
 				/>
 				<pre>/* Click a question to reveal the answer */</pre>
 				<ul>
