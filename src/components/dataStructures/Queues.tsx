@@ -15,7 +15,7 @@ export default function Queues() {
 			{
 				toggle &&
 				<>
-					<p>A queue is a linear data structure that follows a particular order in which the operations are performed - FIFO (First In First Out). Main operations: enqueue, dequeue.</p>
+					<p>A queue is a linear data structure that follows a particular order in which the operations are performed - FIFO (First In First Out). Main operations: enqueue, dequeue, peek/getFront, getRear, isEmpty, size.</p>
 					<img src="graphics/queue.png" className="graphics" />
 					<br />
 					<p>

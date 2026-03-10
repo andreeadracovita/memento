@@ -5,6 +5,7 @@ import DateTime from "components/jsLibrary/DateTime";
 import ErrorClasses from "components/jsLibrary/ErrorClasses";
 import Functions from "components/jsLibrary/Functions";
 import General from "components/jsLibrary/General";
+import Graph from "components/jsLibrary/Graph";
 import HashTable from "components/jsLibrary/HashTable";
 import IteratorsGenerators from "components/jsLibrary/IteratorsGenerators";
 import JSWebBrowsers from "components/jsLibrary/JSWebBrowsers";
@@ -18,24 +19,25 @@ import Regex from "components/jsLibrary/Regex";
 import Set from "components/jsLibrary/Set";
 import Stack from "components/jsLibrary/Stack";
 import String from "components/jsLibrary/String";
+import Tree from "components/jsLibrary/Tree";
 
 export default function JSLibrary() {
 	return (
 		<>
 			<h1 className="archivo-black-regular">JS Library</h1>
-			<DateTime />
+			
 			<Array />
 			<String />
-			<Regex />
-			<Object />
-			<Set />
-			<Map />
-			
 			<List />
 			<Stack />
 			<Queue />
+			<Graph />
+			<Tree />
+			<Set />
+			<Map />
 			<HashTable />
 
+			<Object />
 			<Functions />
 			<Classes />
 			<IteratorsGenerators />
@@ -44,6 +46,8 @@ export default function JSLibrary() {
 			<AsynchronousJS />
 
 			<General />
+			<DateTime />
+			<Regex />
 
 			<JSWebBrowsers />
 			<Node />

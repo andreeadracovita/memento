@@ -46,6 +46,7 @@ export default function JavaCpp() {
 		<>
 			<h1 className="archivo-black-regular">Java & C++</h1>
 			<Sample />
+			https://www.w3schools.com/java/java_data_structures.asp
 		</>
 	);
 }
