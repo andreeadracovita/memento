@@ -3,6 +3,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
+/*
 class TreeNode {
 	constructor(data) {
 		this.data = data;
@@ -225,6 +226,7 @@ class Trie {
 		return this._findNode(prefix.toLowerCase()) !== null;
 	}
 }
+*/
 
 export default function Tree() {
 	const [toggle, setToggle] = useState(false);

@@ -3,6 +3,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
+/*
 class myStack {
 	constructor(cap) {
 		this.arr = new Array();
@@ -48,6 +49,7 @@ class myStack {
 		}
 	}
 }
+*/
 
 export default function Stack() {
 	const [toggle, setToggle] = useState(false);

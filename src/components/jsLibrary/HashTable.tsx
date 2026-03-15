@@ -4,6 +4,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
+/*
 class HashTableImpl {
 	constructor(size = 50) {
 		this.table = new Array(size);
@@ -46,6 +47,7 @@ class HashTableImpl {
 		return true;
 	}
 }
+*/
 
 export default function HashTable() {
 	const [toggle, setToggle] = useState(false);

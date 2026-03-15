@@ -3,6 +3,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
+/*
 class GraphList {
 	constructor() {
 		this.adjList = new Map();
@@ -36,6 +37,7 @@ class GraphMatrix {
 		console.log(this.adjMatrix.forEach(row => console.log(row)));
 	}
 }
+*/
 
 export default function Tree() {
 	const [toggle, setToggle] = useState(false);

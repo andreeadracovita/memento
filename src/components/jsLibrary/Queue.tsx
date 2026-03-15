@@ -3,6 +3,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 
 import CardHeader from "components/CardHeader";
 
+/*
 class Node {
 	constructor(data) {
 		this.data = data;
@@ -49,6 +50,7 @@ class myQueue {
 		return this.head === null;
 	}
 }
+*/
 
 export default function Queue() {
 	const [toggle, setToggle] = useState(false);
