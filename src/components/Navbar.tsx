@@ -10,7 +10,7 @@ export default function Navbar() {
 		<header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between my-3">
 			<div className="col-md-3 mb-2 mb-md-0">
 				<Link to="/memento/" className="d-inline-flex link-body-emphasis text-decoration-none align-items-center">
-					<img src="logo-yellow.png" height="40" />
+					<img src="logo-yellow-v2.png" height="40" />
 					<span className="archivo-black-regular logo-title ms-1">emento</span>
 				</Link>
 			</div>
