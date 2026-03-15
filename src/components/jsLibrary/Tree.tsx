@@ -183,6 +183,49 @@ class BinarySearchTree {
 	}
 }
 
+class TrieNode {
+	constructor() {
+		this.children = new Map();
+		this.isEndOfWord = false;
+	}
+}
+
+class Trie {
+	constructor() {
+		this.root = new TrieNode();
+	}
+
+	insert(word) {
+		let current = this.root;
+		for (const char of word.toLowerCase()) {
+			if (!current.children.has(char)) {
+				current.children.set(char, new TrieNode());
+			}
+			current = current.children.get(char);
+		}
+		current.isEndOfWord = true;
+	}
+
+	search(word) {
+		const node = this._findNode(word.toLowerCase());
+		return node !== null && node.isEndOfWord;
+	}
+
+	_findNode(word) {
+		let current = this.root;
+		for (const char of word) {
+			if (!current.children.has(char)) return null;
+			current = current.children.get(char);
+		}
+		return current;
+	}
+
+	// Check if any word starts with the given prefix
+	startsWith(prefix) {
+		return this._findNode(prefix.toLowerCase()) !== null;
+	}
+}
+
 export default function Tree() {
 	const [toggle, setToggle] = useState(false);
 	const generic = `class TreeNode {
@@ -379,6 +422,58 @@ console.log("Post order:", bstTest.postOrder());
 bstTest.delete(2);
 console.log("In order:", bstTest.inOrder());`;
 
+	const trie = `class TrieNode {
+	constructor() {
+		this.children = new Map();
+		this.isEndOfWord = false;
+	}
+}
+
+class Trie {
+	constructor() {
+		this.root = new TrieNode();
+	}
+
+	insert(word) {
+		let current = this.root;
+		for (const char of word.toLowerCase()) {
+			if (!current.children.has(char)) {
+				current.children.set(char, new TrieNode());
+			}
+			current = current.children.get(char);
+		}
+		current.isEndOfWord = true;
+	}
+
+	search(word) {
+		const node = this._findNode(word.toLowerCase());
+		return node !== null && node.isEndOfWord;
+	}
+
+	_findNode(word) {
+		let current = this.root;
+		for (const char of word) {
+			if (!current.children.has(char)) return null;
+			current = current.children.get(char);
+		}
+		return current;
+	}
+
+	// Check if any word starts with the given prefix
+	startsWith(prefix) {
+		return this._findNode(prefix.toLowerCase()) !== null;
+	}
+}
+
+const myTrie = new Trie();
+myTrie.insert("hello");
+myTrie.insert("help");
+myTrie.insert("world");
+
+console.log(myTrie.search("hello"));
+console.log(myTrie.startsWith("hel"));
+console.log(myTrie.search("hel"));`;
+
 	return (
 		<div className="grey-card">
 			<CardHeader
@@ -397,6 +492,10 @@ console.log("In order:", bstTest.inOrder());`;
 						<li>
 							Binary Search Tree
 							<SyntaxHighlighter language="javascript">{bst}</SyntaxHighlighter>
+						</li>
+						<li>
+							Trie
+							<SyntaxHighlighter language="javascript">{trie}</SyntaxHighlighter>
 						</li>
 					</ul>
 					

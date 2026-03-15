@@ -33,9 +33,9 @@ export default function JSLibrary() {
 			<Queue />
 			<Graph />
 			<Tree />
+			<HashTable />
 			<Set />
 			<Map />
-			<HashTable />
 
 			<Object />
 			<Functions />
