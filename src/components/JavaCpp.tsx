@@ -1,51 +1,21 @@
-import Sample from "components/javaCpp/Sample";
+import MemoryManagement from "components/javaCpp/MemoryManagement";
+import Concurrency from "components/javaCpp/Concurrency";
+import Class from "components/javaCpp/Class";
+import DataStructures from "components/javaCpp/DataStructures";
+import Algorithms from "components/javaCpp/Algorithms";
+import BitManipulation from "components/javaCpp/BitManipulation";
 
 export default function JavaCpp() {
-// 	const stackArray = `class myStack {
-
-//     // array to store elements
-//     private int[] arr;
-
-//     // maximum size of stack
-//     private int capacity;
-
-//     // index of top element
-//     private int top;
-
-//     // constructor
-//     public myStack(int cap) {
-//         capacity = cap;
-//         arr = new int[capacity];
-//         top = -1;
-//     }
-// }`;
-// 	const stackList = `/* Node structure */
-// class Node {
-//     public int data;
-//     public Node next;
-
-//     public Node(int x) {
-//         data = x;
-//         next = null;
-//     }
-// }
-
-// /* Stack class */
-// class MyStack {
-
-//     // pointer to top node
-//     private Node top;
-
-//     public MyStack() {
-//         // initially stack is empty
-//         top = null;
-//     }
-// }`;
 
 	return (
 		<>
 			<h1 className="archivo-black-regular">Java & C++</h1>
-			<Sample />
+			<MemoryManagement />
+			<Concurrency />
+			<Class />
+			<DataStructures />
+			<Algorithms />
+			<BitManipulation />
 			https://www.w3schools.com/java/java_data_structures.asp
 		</>
 	);

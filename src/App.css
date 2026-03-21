@@ -49,6 +49,12 @@ pre {
   display: inline;
   background-color: var(--code-background) !important;
   border-radius: 5px;
+  overflow-x: auto;
+  /*width: 100%;*/
+}
+
+.fill-remaining {
+  flex: 1;
 }
 
 .code {
@@ -239,10 +245,9 @@ a {
   -webkit-box-decoration-break: clone;
   margin: 0;
   border-radius: 7.5px;
-  text-shadow: -12px 12px 9.8px rgba(246, 223, 30, 0.7), 21px -18.1px 7.3px rgba(255, 255, 255, 1), -18.1px -27.3px 30px rgba(255, 255, 255, 1);
 }
 
-/* Sharpie highligheter */
+/* Sharpie highlighter */
 .sharpie-highlight {
   padding: 0.6em 4px;
   line-height: 1.8em;
@@ -252,5 +257,4 @@ a {
   -webkit-box-decoration-break: clone;
   margin: 0;
   border-radius: 7.5px;
-  text-shadow: -12px 12px 9.8px rgba(246, 223, 30, 0.7), 21px -18.1px 7.3px rgba(255, 255, 255, 1), -18.1px -27.3px 30px rgba(255, 255, 255, 1);
 }
