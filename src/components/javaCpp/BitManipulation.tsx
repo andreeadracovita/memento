@@ -1,13 +1,10 @@
 import { useState } from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
 
-// import Accent from "components/Accent";
+import Accent from "components/Accent";
 import CardHeader from "components/CardHeader";
 
 export default function BitManipulation() {
 	const [toggle, setToggle] = useState(false);
-	const javaCode = `// Java code here`;
-	const cppCode = `// C++ code here`;
 
 	return (
 		<div className="grey-card">
@@ -22,22 +19,20 @@ export default function BitManipulation() {
 					<div>
 						<h2 className="card-section">Java</h2>
 						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li><Accent>Integer Size and Signedness</Accent>: Java specifies fixed sizes for int (32-bit signed) and long (64-bit signed).</li>
+							<li><Accent>Right-Shift Operators</Accent>: Java defines {`>>`} as an arithmetic shift (sign-extending) and {`>>>`} as a logical shift (zero-filling).</li>
+							<li><Accent>Undefined vs. Defined Behavior</Accent>: For bitwise operations, Java mandates two's complement representation, ensuring consistent results across platforms.</li>
 						</ul>
-						<SyntaxHighlighter language="java">{javaCode}</SyntaxHighlighter>
 					</div>
 					<hr />
 					<div>
 						<div>
 							<h2 className="card-section">C++</h2>
 							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
+								<li><Accent>Integer Size and Signedness</Accent>: Integer size depends on the compiler and platform.</li>
+								<li><Accent>Right-Shift Operators</Accent>: The behavior of {`>>`} on signed integers is implementation-defined, it can be arithmetic or logical depeneding on the compiler. Can produce different results to Java when shifting negative numbers.</li>
+								<li><Accent>Undefined vs. Defined Behavior</Accent>: Allows undefined behavior in cases like i++ + i++. C++ does not guarantee consistent results across platforms.</li>
 							</ul>
-							<SyntaxHighlighter language="cpp">{cppCode}</SyntaxHighlighter>
 						</div>
 					</div>
 				</>
